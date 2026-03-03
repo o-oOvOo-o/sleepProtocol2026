@@ -188,7 +188,7 @@ const AccessPassCard: React.FC<AccessPassCardProps> = ({
                         {isOwner && (
                             <div className="badge badge-outline">👤 Owned</div>
                         )}
-                        {marketPrice && (
+                        {marketPrice !== undefined && (
                             <div className="badge badge-accent">
                                 💰 {formatUnits(marketPrice, 18)} SLEEP
                             </div>
@@ -279,4 +279,3 @@ const AccessPassCard: React.FC<AccessPassCardProps> = ({
 };
 
 export default AccessPassCard;
-
