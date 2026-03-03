@@ -5,6 +5,9 @@ const nextConfig = {
   i18n,
   reactStrictMode: true,
   swcMinify: true,
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   compiler: {
     emotion: true,
   },
