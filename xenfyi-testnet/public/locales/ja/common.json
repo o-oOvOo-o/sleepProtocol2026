@@ -1,0 +1,385 @@
+{
+  "contract": "コントラクト",
+  "donate": "寄付",
+  "global-rank": "グローバルランク",
+  "chain": "チェーン",
+  "address": "アドレス",
+  "theme": "テーマ",
+  "add-to-wallet": "SLEEPINGをウォレットに追加",
+  "connect-wallet": "ウォレット接続",
+  "or": "または",
+  "success": "成功",
+  "link": {
+    "developer": "開発者",
+    "website-source-code": "ウェブサイトソースコード",
+    "whitepaper": "ホワイトペーパー",
+    "docs": "ドキュメント",
+    "twitter": "Twitter",
+    "telegram": "Telegram",
+    "discord": "Discord",
+    "github": "GitHub",
+    "coinmarketcap": "CoinMarketCap",
+    "dune": "Dune Analytics"
+  },
+  "meta": {
+    "description": "スリープコインは、パッシブインカムを目的とした分散型で公正な立ち上げの暗号通貨プロトコルで、ユーザーがエコシステムに参加することで報酬を得ることができます。"
+  },
+  "dashboard": {
+    "title": "ダッシュボード",
+    "chains": "チェーン",
+    "general-stats": "一般統計",
+    "supply": "供給量",
+    "rewards": "報酬",
+    "days-since-launch": "ローンチからの日数",
+    "token-address": "トークン/アドレス",
+    "select-chain": "チェーンを選択",
+    "chain-id": "チェーンID: {{chainId}}"
+  },
+  "mint": {
+    "title": "ミント",
+    "button-sleep": "スリープ開始",
+    "calculation-details": "計算詳細",
+    "reward-calculator": "報酬計算機",
+    "simulator": {
+      "title": "シナリオシミュレーター",
+      "term": "期間（日）",
+      "count": "カウント",
+      "rank": "グローバルランク",
+      "days": "ジェネシスからの日数",
+      "result": "シミュレート結果"
+    }
+  },
+  "sleepProtocol": {
+    "nav": {
+      "dashboard": "ダッシュボード",
+      "accessPass": "アクセスパス",
+      "mint": "ミント",
+      "stake": "ステーキング",
+      "market": "マーケット",
+      "profile": "プロフィール",
+      "liquidate": "清算",
+      "litepaper": "ライトペーパー"
+    },
+    "common": {
+      "loading": "読み込み中...",
+      "connectTitle": "ウォレットを接続",
+      "walletRequired": "ウォレット接続が必要です",
+      "checkBottomRight": "右下角を確認し、点滅している「ウォレット」ボタンをクリックしてください"
+    },
+    "dashboard": {
+      "title": "Sleep Protocol ダッシュボード",
+      "globalStats": "グローバル統計",
+      "globalRank": "グローバルランク",
+      "totalStaked": "総ステーク量",
+      "daysSinceGenesis": "ジェネシスからの日数",
+      "protocolParameters": "プロトコルパラメータ",
+      "maxTerm": "最大期間 (日)",
+      "totalSupply": "総供給量",
+      "yourAccount": "あなたのアカウント",
+      "address": "アドレス",
+      "sleepBalance": "SLEEP 残高",
+      "connectTitle": "ウォレットを接続",
+      "connectDescription": "Sleep Protocol の全機能を利用するにはウォレットを接続してください"
+    },
+    "accessPass": {
+      "title": "アクセスパス デザインスタジオ",
+      "designerTitle": "ドラッグ可能な NFT デザイナー • Win98 スタイル",
+      "previewInstruction": "ドラッグで移動 · ダブルクリックでリサイズモード · 赤いハンドルでサイズ変更 · カードにホバーすると拡大",
+      "scaleModeLabel": "リサイズモード: {{element}}（現在の倍率: {{scale}}x）",
+      "buttons": {
+        "random": "ランダム",
+        "reset": "レイアウトをリセット",
+        "mint": "パスをミント"
+      },
+      "connectTitle": "ウォレットを接続",
+      "connectDescription": "ウォレットを接続してアクセスパスをデザイン・ミントしましょう"
+    },
+    "devSupport": {
+      "title": "Dev Support - 開発チームを支援",
+      "points": [
+        "• Limitless Labs 開発チームへの任意の追加支援",
+        "• Win98 風オーラと特別バッジをアンロック",
+        "• 今後のプロダクトアクセスの可能性",
+        "• Sleep Protocol の権利やトークノミクスには影響なし"
+      ],
+      "noteTitle": "重要なお知らせ",
+      "noteBody": "Dev Support は完全に任意であり、Sleep Protocol の非中央集権性に影響しません。解釈権はプロジェクトチームにあります。"
+    },
+    "whatYouGet": {
+      "title": "得られる特典",
+      "items": [
+        "✅ 永久無料・手数料なし",
+        "✅ Sleep NFT をミント",
+        "✅ SLEEP トークンをステーキング",
+        "✅ Win98 レトロスタイル",
+        "✅ オンチェーン永続保存"
+      ]
+    },
+    "preview": {
+      "title": "プレビュー設定",
+      "description": "プレビューデータ（ミントには影響しません）：",
+      "supportTier": "サポートレベル",
+      "supportAmount": "サポート額 (OKB)",
+      "stakedSleep": "ステーク済み SLEEP",
+      "totalSupport": "総サポート",
+      "summaryTotal": "合計: {{amount}} OKB",
+      "summaryShare": "あなたの割合: {{percent}}%"
+    },
+    "mint": {
+      "title": "Sleep トークンをミント",
+      "connectDescription": "SLEEP トークンをミントするにはウォレットを接続してください",
+      "parameters": {
+        "title": "ミントパラメータ",
+        "globalRank": "グローバルランク:",
+        "amplifier": "アンプファイア:",
+        "maxTerm": "最大期間:",
+        "maxTermValue": "{{days}} 日",
+        "timeDecay": "時間減衰:"
+      },
+      "form": {
+        "title": "SLEEP トークンをミント",
+        "countLabel": "ミント数量:",
+        "termLabel": "期間 (日):",
+        "fee": "ミント手数料:",
+        "reward": "推定報酬:",
+        "rewardError": "報酬計算エラー",
+        "submitting": "ミント中...",
+        "submit": "トークンをミント"
+      }
+    },
+    "stake": {
+      "title": "トークンをステーキング",
+      "connectDescription": "ATMステーキングシステムを使用するには、ウォレットを接続してください。",
+      "atm": {
+        "title": "SLEEP プロトコル ATM",
+        "welcome": "Sleep プロトコル ATM へようこそ",
+        "insertCard": "ウォレットカードを挿入してください",
+        "selectService": "サービスを選択：",
+        "services": {
+          "stake": "SLEEP をステーキング",
+          "unstake": "SLEEP のステーキング解除",
+          "checkBalance": "残高確認",
+          "rewards": "報酬を受け取り"
+        },
+        "processing": "処理中...",
+        "thankYou": "Sleep プロトコル ATM をご利用いただきありがとうございます",
+        "screen": {
+          "balance": "現在の残高：",
+          "staked": "ステーキング量：",
+          "rewards": "未受取報酬：",
+          "enterAmount": "金額を入力：",
+          "confirm": "取引を確認",
+          "success": "取引成功！",
+          "accountSummary": "アカウント概要",
+          "operation": "操作：",
+          "amount": "金額：",
+          "available": "利用可能：",
+          "enterUsingKeypad": "キーパッドで金額を入力",
+          "pleaseWait": "お待ちください...",
+          "walletConnected": "ウォレット接続済み",
+          "okbRewards": "OKB 報酬：",
+          "sleepRewards": "SLEEP 報酬："
+        },
+        "buttons": {
+          "cancel": "キャンセル",
+          "back": "戻る",
+          "confirm": "確認",
+          "menu": "メニュー"
+        },
+        "status": {
+          "approving": "承認中...",
+          "confirmingApprove": "承認確認中...",
+          "staking": "ステーキング中...",
+          "confirmingStake": "ステーキング確認中...",
+          "unstaking": "ステーキング解除中..."
+        }
+      }
+    },
+    "market": {
+      "title": "NFT マーケットプレイス",
+      "connectDescription": "マーケットプレイスを利用するにはウォレットを接続してください"
+    },
+    "profile": {
+      "title": "プロフィール",
+      "connectDescription": "プロフィールを表示するにはウォレットを接続してください"
+    },
+    "liquidate": {
+      "title": "清算",
+      "connectDescription": "清算機能を利用するにはウォレットを接続してください",
+      "overview": {
+        "title": "清算概要",
+        "points": [
+          "期限切れのミントを特定し、清算することで報酬を獲得",
+          "清算者は清算されたミントの価値の一部を受け取る",
+          "これによりプロトコルの健全性が維持される"
+        ]
+      }
+    },
+    "litepaper": {
+      "title": "ライトペーパー",
+      "content": "Sleep Protocol の技術仕様とトークノミクスの詳細"
+    },
+    "avatar": {
+      "title": "アバター",
+      "faceOptions": [
+        "丸顔", "四角顔", "三角顔", "楕円顔", "ダイヤ顔"
+      ],
+      "eyeOptions": [
+        "丸目", "細目", "大きな目", "ウィンク", "閉じた目"
+      ],
+      "mouthOptions": [
+        "笑顔", "真顔", "困った顔", "驚き", "ウィンク"
+      ],
+      "hairOptions": [
+        "短髪", "長髪", "カーリー", "ストレート", "ボブ"
+      ],
+      "skinOptions": [
+        "薄い", "普通", "濃い", "とても薄い", "とても濃い"
+      ],
+      "accessoryOptions": [
+        "なし", "眼鏡", "帽子", "イヤリング", "ネックレス"
+      ]
+    },
+    "badge": {
+      "title": "バッジ",
+      "options": [
+        "なし", "ロケット", "ダイヤモンド", "月", "稲妻"
+      ]
+    },
+    "country": {
+      "title": "国",
+      "options": {
+        "AU": "オーストラリア",
+        "BR": "ブラジル",
+        "CA": "カナダ",
+        "CN": "中国",
+        "FR": "フランス",
+        "DE": "ドイツ",
+        "IN": "インド",
+        "IT": "イタリア",
+        "JP": "日本",
+        "MX": "メキシコ",
+        "NL": "オランダ",
+        "NO": "ノルウェー",
+        "RU": "ロシア",
+        "SG": "シンガポール",
+        "KR": "韓国",
+        "ES": "スペイン",
+        "SE": "スウェーデン",
+        "CH": "スイス",
+        "UK": "イギリス",
+        "US": "アメリカ"
+      }
+    },
+    "elements": {
+      "avatar": "アバター",
+      "badge": "バッジ",
+      "countryFlag": "国旗",
+      "devSupport": "Dev Support バッジ",
+      "devSupportInfo": "Dev Support 情報",
+      "bottomText": "フッターテキスト"
+    },
+    "nft": {
+      "labels": {
+        "stakedSleep": "ステーク済み SLEEP",
+        "claimableOkb": "請求可能 OKB",
+        "claimableSleep": "請求可能 SLEEP",
+        "devSupport": "開発支援",
+        "totalPool": "総プール",
+        "cardHolder": "カードホルダー",
+        "accessPassTitle": "SLEEP プロトコル アクセスパス"
+      }
+    }
+  },
+  "status": {
+    "current": "現在のページ：{{page}}"
+  },
+  "litepaper": {
+    "tableOfContents": "目次",
+    "ethos": {
+      "title": "我々の理念：公平なローンチの再構築",
+      "p1": "Sleep Coinは参加証明の核心原則から生まれましたが、第一世代の公平ローンチトークンの経済的脆弱性に対処するために再設計されました。私たちは透明で公平で持続可能なシステムを信じています。",
+      "p2": "私たちの理念は4つの柱に基づいています：",
+      "pillar1": "検証可能な希少性",
+      "pillar1Text": "無限インフレーションのトークンとは異なり、Sleep Coinはほぼ予測可能なハードキャップを持っています（ソフトキャップに達した時のMintトークン数は無視できる程度〜サイクルは約1.5-2年）、1年以内に大幅な減産。価値は希少性から生まれます。",
+      "pillar2": "経済的持続可能性",
+      "pillar2Text": "ミント手数料と動的取引税システムを通じて、プロトコルは独自の流動性とステーカー報酬を生成し、外部資金に依存しない自己維持型の経済ループを作成します。手数料により、ボットや大口による悪意のあるバッチMintを防ぎます。",
+      "pillar3": "操作耐性",
+      "pillar3Text": "トークノミクスはクジラを阻止し、長期参加者に報酬を与えるように設計されています。人口圧力メカニズムにより、より多くの人が参加するにつれてインフレ率が自動調整され、システムが少数によって制御されることを防ぎます。",
+      "pillar4": "完全な分散化",
+      "pillar4Text": "すべてのMint税と取引税は完全にプロトコルの流動性とステーカー報酬に使用され、チーム資金の予約はありません。テストネットのテスト契約の管理者権限はすべて破棄され、関連コードが削除され、管理者権限は一切ありません。"
+    },
+    "tokenomics": {
+      "title": "トークノミクス：メカニズムの交響曲",
+      "intro": "Sleep Coinのすべてのメカニズムは協調して動作するように設計され、バランスの取れた堅牢な経済モデルを作成します。",
+      "keyMetrics": "主要指標",
+      "totalSupply": "総供給量",
+      "mintingMechanism": "ミントメカニズム",
+      "stakingRewards": "ステーキング報酬",
+      "feeStructure": "手数料構造"
+    },
+    "mintFee": {
+      "title": "ミント手数料 (0.01 OKB)",
+      "content": "ミントバッチごと（最大100単位）の小額固定手数料は、重要なアンチボット対策として機能します。この手数料は、プロトコルの流動性とステーキング報酬の初期資金の主要源であり、システムが初日から自己起動できることを保証します。",
+      "tip": "プロのヒント：手数料構造はエコシステムに資金を提供しながらスパムを防ぎます！"
+    },
+    "dynamicTerm": {
+      "title": "動的最大期間",
+      "content": "最大ミント期間は45日から始まり、3日ごとに1日増加します。これにより、後から参加する人が早期ミンターに対して「時間の武器」を活用する公平な機会を得て、最初の年で競争環境を均衡させます。",
+      "timeline": "タイムライン：45日 → 3日ごとに+1日 → 競争環境の均衡！"
+    },
+    "populationPressure": {
+      "title": "人口圧力（アンプ調整）",
+      "content": "ミント公式の重要な構成要素である報酬アンプは静的ではありません。グローバルランクが100,000増加するごとに、ベースアンプが2%減少します。これは、ユーザーベースが成長するにつれてインフレーションの自然なブレーキとして機能し、長期的な持続可能性を保証します。",
+      "important": "重要：より多くのユーザー = より低いインフレーション！スマートな経済学！"
+    },
+    "timeDecay": {
+      "title": "時間減衰（指数減少）",
+      "content": "強力な指数減衰関数がミント報酬計算に適用されます。これにより、ミント報酬が1年後に徐々にゼロに近づくことが保証され、有限の発行ウィンドウを作成し、インフレーション段階の明確な終了を確立します。",
+      "result": "結果：有限供給 + 減少するインフレーション = 価値保全！"
+    },
+    "tax": {
+      "title": "取引税",
+      "content": "取引税は長期保有者に報酬を与え、エコシステムに資金を提供するように設計されています。税は2つの段階に構成されています：",
+      "phase1": "第1段階（最初の年）：",
+      "phase1Tax": "2% 購入税 / 4% 売却税",
+      "phase2": "第2段階（1年後）：",
+      "phase2Tax": "0% 購入税 / 1% 売却税"
+    },
+    "feeDistribution": {
+      "title": "手数料配分",
+      "content": "プロトコルが収集するすべての手数料（ミントと税から）はプログラム的に配分されます：",
+      "beforeRank": "グローバルランクが100,000に達する前：",
+      "beforeRankText": "50%をプロトコル所有流動性に、48%をOKBステーキング報酬に、2%を燃焼",
+      "afterRank": "グローバルランクが100,000に達した後：",
+      "afterRankText": "すべての手数料の100%がOKBステーキング報酬に向けられ、長期ステーカーに強力なインセンティブを作成します。取引税による報酬は、人口の増加とともにステーキングプールへの預金から完全にユーザーへの報酬へと徐々にシフトし、トークン減産係数とともに徐々にゼロに近づきます。この時点で、Sleepトークンとプロトコル契約は完全に無税で分散化された完全なコミュニティガバナンスプロジェクトになります。通常のERCトークンになったとき、プロジェクトはトークンの構築と強化を続けます。NFTマーケットプレイスの開発を完了し、ゲーム、契約DEXなどのサプライズが続きます（多分）。"
+    }
+  },
+  "contextMenu": {
+    "view": "表示",
+    "refresh": "更新",
+    "new": "新規作成",
+    "properties": "プロパティ",
+    "notepadDocument": "メモ帳ドキュメント",
+    "refreshed": "デスクトップが更新されました",
+    "propertiesTitle": "Sleep Protocol プロパティ",
+    "version": "バージョン",
+    "build": "ビルド",
+    "platform": "プラットフォーム",
+    "developer": "開発者",
+    "description": "説明",
+    "descriptionText": "パッシブ収入生成のための分散型プロトコル"
+  },
+  "docs": {
+    "tableOfContents": "目次",
+    "overview": "概要",
+    "architecture": "アーキテクチャ", 
+    "staking": "ステーキング",
+    "tokenomics": "トークノミクス",
+    "api": "API リファレンス",
+    "faq": "よくある質問",
+    "edit": "編集",
+    "save": "保存",
+    "devMode": "開発者モード：このドキュメントを編集できます"
+  }
+}

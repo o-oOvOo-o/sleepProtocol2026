@@ -1,0 +1,54 @@
+version: '3'
+services:
+  postgres:
+    image: postgres:12
+    container_name: sleep-protocol-postgres
+    environment:
+      POSTGRES_USER: graph-node
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: graph-node
+    ports:
+      - '5432:5432'
+    volumes:
+      - ./data/postgres:/var/lib/postgresql/data
+
+  ipfs:
+    image: ipfs/go-ipfs:v0.9.1
+    container_name: sleep-protocol-ipfs
+    ports:
+      - '5002:5001'
+      - '8080:8080'
+    volumes:
+      - ./data/ipfs:/data/ipfs
+
+  graph-node:
+    image: graphprotocol/graph-node:v0.28.0
+    container_name: sleep-protocol-graph-node
+    ports:
+      - '8020:8020'
+      - '8000:8000'
+      - '8001:8001'
+    depends_on:
+      - postgres
+      - ipfs
+    environment:
+      postgres_host: postgres
+      postgres_user: graph-node
+      postgres_pass: password
+      postgres_db: graph-node
+      ipfs: ipfs:5001
+      ethereum: 'xlayertest:https://xlayertestrpc.okx.com/terigon'
+
+
+
+
+
+
+
+
+
+
+
+
+
+

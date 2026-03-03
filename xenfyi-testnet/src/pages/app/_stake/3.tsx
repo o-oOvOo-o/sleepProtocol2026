@@ -1,0 +1,148 @@
+import { InformationCircleIcon } from "@heroicons/react/outline";
+import { clsx } from "clsx";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useContext, useEffect, useState } from "react";
+import { useForm } from "react-hook-form";
+import toast from "react-hot-toast";
+import { useAccount, useContractWrite, useChainId, usePrepareContractWrite, useWaitForTransaction } from "wagmi";
+
+import XENCryptoABI from "~/abi/XENCryptoABI";
+import Breadcrumbs from "~/components/Breadcrumbs";
+import CardContainer from "~/components/containers/CardContainer";
+import Container from "~/components/containers/Container";
+import GasEstimate from "~/components/GasEstimate";
+import { CountDataCard } from "~/components/StatCards";
+import XENContext from "~/contexts/XENContext";
+import { calculateStakeReward, UTC_TIME } from "~/lib/helpers";
+import { xenContract } from "~/lib/xen-contract";
+
+const Stake = () => {
+  const { t } = useTranslation("common");
+
+  const { address } = useAccount();
+  const chainId = useChainId();
+  const router = useRouter();
+  const [disabled, setDisabled] = useState(true);
+  const [processing, setProcessing] = useState(false);
+  const [earlyEndStake, setEarlyEndStake] = useState(false);
+
+  const { handleSubmit } = useForm();
+
+  const { userStake, feeData } = useContext(XENContext);
+
+  const { config } = usePrepareContractWrite({
+    address: xenContract(chain).address,
+    abi: XENCryptoABI,
+    functionName: "withdraw",
+    enabled: (userStake && !userStake.term.isZero()) ?? false,
+  });
+  const { data: withdrawData, write: writeStake } = useContractWrite({
+    ...config,
+    onSuccess(_data) {
+      setProcessing(true);
+      setDisabled(true);
+    },
+  });
+  const {} = useWaitForTransaction({
+    hash: withdrawData?.hash,
+    onSuccess(_data) {
+      toast(t("toast.end-stake-successful"));
+      router.push("/stake/1");
+    },
+  });
+  const handleStakeSubmit = () => {
+    writeStake?.();
+  };
+
+  useEffect(() => {
+    if (!processing && address && userStake && !userStake.maturityTs?.isZero()) {
+      setDisabled(false);
+      if (UTC_TIME < userStake.maturityTs.toNumber() ?? 0) {
+        setEarlyEndStake(true);
+      }
+    }
+  }, [address, userStake, router, processing]);
+
+  return (
+    <Container className="max-w-2xl">
+      <Breadcrumbs />
+
+      <div className="flew flex-row space-y-8 ">
+        <div className="text-center">
+          <ul className="steps">
+            <Link href="/app/stake/1" className="step step-neutral">
+              Amount
+            </Link>
+            <Link href="/app/stake/2" className="step step-neutral">
+              Duration
+            </Link>
+            <Link href="/app/stake/3" className="step step-neutral">
+              Confirm
+            </Link>
+          </ul>
+        </div>
+        <CardContainer>
+          <form onSubmit={handleSubmit(handleStakeSubmit)}>
+            <div className="flex flex-col space-y-4">
+              <h2 className="card-title text-neutral">{t("stake.end")}</h2>
+
+              <div className="stats glass w-full text-neutral">
+                <CountDataCard
+                  title={t("card.reward")}
+                  value={calculateStakeReward({
+                    maturityTs: Number(userStake?.maturityTs ?? 0),
+                    term: Number(userStake?.term ?? 0),
+                    amount: Number(userStake?.amount ?? 0),
+                    apy: Number(userStake?.apy ?? 0),
+                  })}
+                  description="XEN"
+                />
+              </div>
+
+              {earlyEndStake && (
+                <div className="alert shadow-lg glass">
+                  <div>
+                    <div>
+                      <InformationCircleIcon className="w-8 h-8" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold">{t("stake.note")}</h3>
+                      <div className="text-xs">{t("stake.note-description")}</div>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              <div className="form-control w-full">
+                <button
+                  type="submit"
+                  className={clsx("btn glass text-neutral", {
+                    loading: processing,
+                  })}
+                  disabled={disabled}
+                >
+                  {earlyEndStake ? t("stake.end-early") : t("stake.end")}
+                </button>
+              </div>
+
+              <GasEstimate feeData={feeData} gasLimit={config?.request?.gasLimit} />
+            </div>
+          </form>
+        </CardContainer>
+      </div>
+    </Container>
+  );
+};
+
+export async function getStaticProps({ locale }: any) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["common"])),
+    },
+  };
+}
+
+export default Stake;

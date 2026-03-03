@@ -1,0 +1,74 @@
+@font-face {
+  font-family: 'Windows95';
+  src: url(../static/fonts/w95fa.woff) format('woff'),
+  url(../static/fonts/w95fa.woff2) format('woff2');
+}
+
+/*TODO figure out which formats need to be added*/
+@font-face {
+  font-family: 'DOS';
+  src: url(../static/fonts/perfectDosVga437win.ttf);
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+}
+
+div, span, button, input {
+  box-sizing: border-box;
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  background: none;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  padding: 0;
+  cursor: inherit;
+}
+
+input, textarea {
+  border: none;
+  font-family: inherit;
+  margin: 0;
+  padding: 0;
+  cursor: inherit;
+}
+
+input[type="radio"] {
+  /* Add if not using autoprefixer */
+  -webkit-appearance: none;
+  appearance: none;
+  /* For iOS < 15 to remove gradient background */
+  background-color: #fff;
+}
+
+label {
+  cursor: inherit;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+}
+
+table, tbody, tr, th, td {
+  padding: 0;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

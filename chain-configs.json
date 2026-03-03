@@ -1,0 +1,73 @@
+{
+  "networks": {
+    "xlayertest": {
+      "chainId": 1952,
+      "name": "X Layer Testnet",
+      "rpcUrl": "https://testrpc.xlayer.tech",
+      "blockExplorer": "https://www.oklink.com/xlayer-test",
+      "nativeToken": {
+        "name": "OKB",
+        "symbol": "OKB",
+        "decimals": 18
+      },
+      "wrappedNativeToken": "0x4200000000000000000000000000000000000006",
+      "mintFee": "0.01",
+      "subgraph": {
+        "network": "xlayertest",
+        "startBlock": 9410065
+      },
+      "logo": "/win98/assets/icons/chain/Xlayer.png",
+      "contracts": {
+        "tokenCore": "0x078373C0F834FbB2477066BA4eF4674085d14366",
+        "tokenMinter": "0x3c36c96E69c6585F7b2d877239989a25f80De68F",
+        "tokenStaking": "0x1C3dF2b93A8778F5d9D5cd8C9FeC04749021e8b8",
+        "tokenTreasury": "0x0855BFC02BFD09626a1e353Ee2EE9926E29DAD68",
+        "tokenAccessPass": "0xa4304C2767b18769b795647e45B9D37c06dc0aEe",
+        "devSupport": "0x5b11a9b102B61B4B3b9f9D1FD494405C62c7799d",
+        "sleepNftMarketplace": "0x98680beEaACf49c942f5bfb3B6b4b599CF5e2ac7",
+        "marketTreasury": "0x0ABf85DA2099E805bb5479d379E7b16121786953",
+        "sleepPoolFactory": "0x0000000000000000000000000000000000000000",
+        "protocolPool": "0x36d4afE6b94a65dAe72D92395452Ee28f98B8123",
+        "communityPool": "0xa3cCA9081E6BD6666d19725383A32D3b272bCEb8",
+        "sleepRouter": "0x734c3a35608431c8B2377F491a7E67856D94B5c2"
+      }
+    },
+    "sepolia": {
+      "chainId": 11155111,
+      "name": "Ethereum Sepolia",
+      "rpcUrl": "https://eth-sepolia.public.blastapi.io",
+      "blockExplorer": "https://sepolia.etherscan.io",
+      "nativeToken": {
+        "name": "Ethereum",
+        "symbol": "ETH",
+        "decimals": 18
+      },
+      "wrappedNativeToken": "0xfFf9976782d46CC05630D1f6eBAb18b2324d6B14",
+      "mintFee": "0.01",
+      "subgraph": {
+        "network": "sepolia",
+        "startBlock": 9411115
+      },
+      "logo": "/win98/assets/icons/chain/Ethereum.png",
+      "contracts": {
+        "tokenCore": "0x078373C0F834FbB2477066BA4eF4674085d14366",
+        "tokenMinter": "0x3c36c96E69c6585F7b2d877239989a25f80De68F",
+        "tokenStaking": "0x1C3dF2b93A8778F5d9D5cd8C9FeC04749021e8b8",
+        "tokenTreasury": "0x0855BFC02BFD09626a1e353Ee2EE9926E29DAD68",
+        "tokenAccessPass": "0xa4304C2767b18769b795647e45B9D37c06dc0aEe",
+        "devSupport": "0x5b11a9b102B61B4B3b9f9D1FD494405C62c7799d",
+        "sleepNftMarketplace": "0x98680beEaACf49c942f5bfb3B6b4b599CF5e2ac7",
+        "marketTreasury": "0x0ABf85DA2099E805bb5479d379E7b16121786953",
+        "sleepPoolFactory": "0x0000000000000000000000000000000000000000",
+        "protocolPool": "0x0000000000000000000000000000000000000000",
+        "communityPool": "0x0000000000000000000000000000000000000000",
+        "sleepRouter": "0x0000000000000000000000000000000000000000"
+      }
+    }
+  },
+  "defaultNetwork": "xlayertest",
+  "subgraph": {
+    "localUrl": "http://127.0.0.1:8000/subgraphs/name/sleep-protocol",
+    "deploymentName": "sleep-protocol"
+  }
+}

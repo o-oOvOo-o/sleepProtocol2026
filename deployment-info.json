@@ -1,0 +1,48 @@
+{
+  "TokenCore": {
+    "address": "0x078373C0F834FbB2477066BA4eF4674085d14366",
+    "blockNumber": 9412175
+  },
+  "TokenAccessPass": {
+    "address": "0xa4304C2767b18769b795647e45B9D37c06dc0aEe",
+    "blockNumber": 9412176
+  },
+  "TokenStaking": {
+    "address": "0x1C3dF2b93A8778F5d9D5cd8C9FeC04749021e8b8",
+    "blockNumber": 9412177
+  },
+  "TokenMinter": {
+    "address": "0x3c36c96E69c6585F7b2d877239989a25f80De68F",
+    "blockNumber": 9412178
+  },
+  "TokenTreasury": {
+    "address": "0x0855BFC02BFD09626a1e353Ee2EE9926E29DAD68",
+    "blockNumber": 9412179
+  },
+  "MarketTreasury": {
+    "address": "0x0ABf85DA2099E805bb5479d379E7b16121786953",
+    "blockNumber": 9412180
+  },
+  "SleepNftMarketplace": {
+    "address": "0x98680beEaACf49c942f5bfb3B6b4b599CF5e2ac7",
+    "blockNumber": 9412181
+  },
+  "DevSupport": {
+    "address": "0x5b11a9b102B61B4B3b9f9D1FD494405C62c7799d",
+    "blockNumber": 9412182
+  },
+  "pools": {
+    "SleepV2Pool": {
+      "address": "0x42Bca83ea332B046b23991c8D6AAD47b926Dd610",
+      "blockNumber": 9412185
+    },
+    "SleepV4Pool": {
+      "address": "0xbd41DDc4d5099bCc5A35353ec8b24a507180559C",
+      "blockNumber": 9412185
+    },
+    "SleepRouter": {
+      "address": "0x538BE0519B9911363A3469E5EF59460Be12BAeD4",
+      "blockNumber": 9412185
+    }
+  }
+}

@@ -1,0 +1,16 @@
+import { useDispatch, useSelector } from 'react-redux'
+
+import { changeBiosLoadingStatus } from '../store/system/actions'
+import { selectSystem } from '../store/system/selectors'
+
+export function useBiosLoading() {
+  const { isBiosLoaded } = useSelector(selectSystem)
+  const dispatch = useDispatch()
+
+  return {
+    isBiosLoaded,
+    setIsBiosLoaded: (isBiosLoaded: boolean) => {
+      return dispatch(changeBiosLoadingStatus(isBiosLoaded))
+    },
+  }
+}

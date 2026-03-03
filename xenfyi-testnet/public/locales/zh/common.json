@@ -1,0 +1,679 @@
+{
+  "contract": "合约",
+  "donate": "捐赠",
+  "global-rank": "全球排名",
+  "chain": "区块链",
+  "address": "地址",
+  "theme": "主题",
+  "add-to-wallet": "添加SLEEPING到钱包",
+  "connect-wallet": "连接钱包",
+  "or": "或",
+  "success": "成功",
+  "link": {
+    "developer": "开发者",
+    "website-source-code": "网站源码",
+    "whitepaper": "白皮书",
+    "docs": "文档",
+    "twitter": "Twitter",
+    "telegram": "Telegram",
+    "discord": "Discord",
+    "github": "GitHub",
+    "coinmarketcap": "CoinMarketCap",
+    "dune": "Dune分析"
+  },
+  "meta": {
+    "description": "睡觉币（Sleep Coin）是一个去中心化的、公平启动的加密货币协议，专为被动收入而设计，允许用户通过参与生态系统来获得奖励。"
+  },
+  "dashboard": {
+    "title": "仪表盘",
+    "chains": "区块链",
+    "general-stats": "通用状态",
+    "supply": "供应量",
+    "rewards": "奖励",
+    "days-since-launch": "创世天数",
+    "token-address": "代币/地址",
+    "select-chain": "选择区块链",
+    "chain-id": "区块链ID: {{chainId}}"
+  },
+  "mint": {
+    "title": "铸币",
+    "button-sleep": "开始睡眠",
+    "calculation-details": "计算详情",
+    "reward-calculator": "奖励计算器",
+    "simulator": {
+      "title": "情景模拟器",
+      "term": "模拟天数",
+      "count": "模拟批次",
+      "rank": "模拟排名",
+      "days": "创世天数",
+      "result": "模拟结果"
+    }
+  },
+  "stake": {
+    "title": "质押",
+    "start": "开始质押",
+    "staking": "质押中",
+    "end": "结束质押",
+    "end-early": "提前结束质押",
+    "terms": "质押条款",
+    "terms-details": "可以在成熟期后的任意时刻提取原质押数量以及奖励数量，或者在成熟期之前提取原质押数量且没有奖励。每个钱包地址只能在同一时刻质押一次。",
+    "terms-details-new": "质押您的SLEEPING代币以赚取OKB奖励。质押满30天成为“老兵”以获得额外奖励。您可以随时取消质押。",
+    "note": "注释",
+    "note-description": "您的质押期限还没有结束。您可以提前结束质押，虽然没有惩罚，但也没有奖励；或者您也可以等待质押成熟期满后提取质押数量以及奖励。",
+    "your-stake": "您的质押",
+    "veteran-status": "身份",
+    "days-to-veteran": "距离成为老兵",
+    "rewards-to-claim": "可领取的奖励",
+    "claim-reward": "领取奖励",
+    "unstake": "提取质押",
+    "approve": "授权"
+  },
+  "gas": {
+    "gas": "GAS",
+    "transaction": "交易",
+    "total": "总计",
+    "gas-on-destination": "目标链上的Gas",
+    "est-gas-on-destination": "预计目标链上的Gas"
+  },
+  "liquidate": {
+    "title": "清算"
+  },
+  "access-pass": {
+    "title": "通行证"
+  },
+  "card": {
+    "chain": "区块链",
+    "days-since-launch": "创世天数",
+    "contract": "合约",
+    "global-rank": "全球排名",
+    "mint-fee": "铸币费",
+    "active-mints": "活跃铸造",
+    "active-stakes": "活跃质押",
+    "max-mint-term": "最大铸造期限",
+    "total": "总计",
+    "matures-in": "成熟期",
+    "progress": "过程",
+    "estimated": "估计的",
+    "estimated-reward": "预估奖励",
+    "amplifier": "放大器",
+    "time-decay": "时间衰减",
+    "eaa-rate": "EAA率",
+    "term": "期限",
+    "reward": "奖励",
+    "penalty": "惩罚",
+    "yield": "收益",
+    "liquid": "流动池",
+    "staked": "质押量",
+    "maturity": "成熟度",
+    "claim-rank": "申领排名",
+    "annual-percentage-yield": "AMP",
+    "days": "天数",
+    "countdown-details": "天•小时:分钟:秒"
+  },
+  "form-field": {
+    "days": "天数",
+    "days-required": "睡眠期限是必需的。",
+    "days-positive": "睡眠期限必须是正数。",
+    "days-integer": "睡眠期限必须是整数。",
+    "days-maximum": "最大天数是 {{numberOfDays}}",
+    "days-description": "天数的数值",
+    "term-days": "期限 (天)",
+    "term-placeholder": "例如: 45",
+    "count": "数量",
+    "mint-units": "铸币单元",
+    "sleep-duration": "睡眠时长",
+    "count-required": "Mint 单位是必需的。",
+    "count-min": "Mint 单位必须至少为 1。",
+    "count-max": "Mint 单位不能超过 {{max}}。",
+    "count-integer": "Mint 单位必须是整数。",
+    "count-placeholder": "例如: 10",
+    "percentage": "百分比",
+    "percentage-required": "需要的百分比",
+    "percentage-positive": "百分比必须大于0",
+    "percentage-maximum": "最大百分比是100",
+    "percentage-description": "不超过100的数值",
+    "wallet-address": "钱包地址",
+    "wallet-address-description": "钱包地址以0x...开头",
+    "wallet-address-required": "需要的钱包地址",
+    "wallet-address-invalid": "无效的钱包地址",
+    "amount": "数量",
+    "amount-required": "需要的数量",
+    "amount-maximum": "最大数量是 {{maximumAmount}}",
+    "amount-positive": "数量必须大于0",
+    "amount-description": "最大数量",
+    "max": "最大值",
+    "go-to-today": "转到今天",
+    "lock-month": "锁定月份"
+  },
+  "toast": {
+    "copied-to-clipboard": "已复制到剪贴板",
+    "claim-successful": "申领成功",
+    "mint-successful": "铸造成功!",
+    "claim-and-share-successful": "申领铸造并分享成功",
+    "claim-and-stake-successful": "申领铸造并质押成功",
+    "stake-successful": "质押成功",
+    "end-stake-successful": "结束质押成功",
+    "error": "错误"
+  },
+  "common": {
+    "mint": "铸币",
+    "stake": "质押",
+    "litepaper": "白皮书",
+    "dashboard": "仪表盘",
+    "settings": "设置",
+    "connect-wallet": "连接钱包",
+    "token-symbol": "SLEEPING",
+    "native-symbol": "OKB"
+  },
+  "winxp": {
+    "desktop": {
+      "sleep-protocol": "睡觉协议",
+      "internet-explorer": "网络浏览器",
+      "sleep-website": "睡觉网站",
+      "minesweeper": "扫雷游戏",
+      "my-computer": "我的电脑"
+    },
+    "menu": {
+      "log-off": "注销",
+      "turn-off-computer": "关闭计算机",
+      "all-programs": "所有程序"
+    },
+    "app": {
+      "sleep-protocol-title": "睡觉协议 - 睡梦中致富",
+      "internet-explorer-title": "网络浏览器",
+      "address-bar": "地址(D):",
+      "go-button": "转到",
+      "address-placeholder": "输入网址...",
+      "current-page": "当前页面",
+      "desktop-app-version": "睡觉协议桌面应用 v1.0",
+      "navigation": {
+        "dashboard": "仪表板",
+        "mint-nft": "铸造NFT",
+        "stake": "质押",
+        "liquidate": "清算",
+        "market": "交易",
+        "profile": "档案",
+        "access-pass": "通行证",
+        "developer": "开发者"
+      }
+    }
+  },
+  "market": {
+    "title": "NFT 市场",
+    "filters": {
+      "price-range": "价格范围",
+      "term-filter": "期限筛选",
+      "sort-by": "排序方式",
+      "all": "全部",
+      "short": "短期 ≤ 7天",
+      "medium": "中期 8-30天",
+      "long": "长期 > 30天",
+      "newest": "最新优先",
+      "price-low-high": "价格: 低到高",
+      "rank": "排名"
+    },
+    "stats": {
+      "total-listings": "总挂单数",
+      "floor-price": "地板价",
+      "trading-volume": "24小时交易量"
+    },
+    "nft": {
+      "buy-now": "立即购买",
+      "view-details": "查看详情",
+      "price": "价格",
+      "rank": "排名",
+      "term": "期限",
+      "maturity": "成熟度",
+      "penalty": "惩罚"
+    },
+    "tooltip": {
+      "platform-fee": "平台交易费适用于所有交易"
+    }
+  },
+  "days": "天",
+  "sleepProtocol": {
+    "nav": {
+      "dashboard": "仪表盘",
+      "accessPass": "通行证",
+      "mint": "铸币",
+      "stake": "质押",
+      "swap": "交易",
+      "market": "交易",
+      "profile": "档案",
+      "liquidate": "清算",
+      "developer": "开发者",
+      "litepaper": "白皮书"
+    },
+    "common": {
+      "loading": "加载中...",
+      "connectTitle": "连接钱包",
+      "walletRequired": "需要连接钱包",
+      "checkBottomRight": "请查看右下角并点击闪烁的\"钱包\"按钮"
+    },
+    "status": {
+      "current": "当前页面：{{page}}"
+    },
+    "dashboard": {
+      "title": "睡觉协议仪表盘",
+      "globalStats": "全球统计",
+      "globalRank": "全球排名",
+      "totalStaked": "总质押量",
+      "daysSinceGenesis": "创世天数",
+      "protocolParameters": "协议参数",
+      "maxTerm": "最大期限（天）",
+      "totalSupply": "总供应量",
+      "yourAccount": "您的账户",
+      "address": "地址",
+      "sleepBalance": "SLEEP 余额",
+      "connectTitle": "连接您的钱包",
+      "connectDescription": "要访问仪表盘功能，请连接您的钱包。"
+    },
+    "accessPass": {
+      "title": "通行证设计工作室",
+      "designerTitle": "可拖拽 NFT 设计器 • Win98 风格",
+      "previewInstruction": "拖动移动 · 双击进入缩放模式 · 拖动红点缩放 · 悬停卡片放大",
+      "scaleModeLabel": "缩放模式：{{element}}（当前缩放：{{scale}}x）",
+      "buttons": {
+        "random": "随机设计",
+        "reset": "重置布局",
+        "mint": "铸造通行证"
+      },
+      "connectTitle": "连接钱包",
+      "connectDescription": "要设计并铸造您的通行证，请连接您的钱包。"
+    },
+    "devSupport": {
+      "title": "开发者支持 - 支持开发团队",
+      "points": [
+        "• 可选择额外赞助链上无限公司开发团队",
+        "• 解锁 Win98 风格光环与专属标识",
+        "• 未来可能获得团队其他产品的权益",
+        "• 不会改变 Sleep Protocol 的权益或代币经济"
+      ],
+      "noteTitle": "重要说明",
+      "noteBody": "Dev Support 完全可选，不会影响 Sleep Protocol 的去中心化特性。解释权归项目方所有。"
+    },
+    "whatYouGet": {
+      "title": "您将获得",
+      "items": [
+        "✅ 永久免费，无任何费用",
+        "✅ 可铸造 Sleep NFT",
+        "✅ 可质押 SLEEP 代币",
+        "✅ 纯正 Win98 复古风",
+        "✅ 链上永久存储"
+      ]
+    },
+    "preview": {
+      "title": "预览调试",
+      "description": "预览数据（不会影响铸造）：",
+      "supportTier": "支持等级",
+      "supportAmount": "支持金额 (OKB)",
+      "stakedSleep": "质押 SLEEP",
+      "totalSupport": "总支持量",
+      "summaryTotal": "总计：{{amount}} OKB",
+      "summaryShare": "您的占比：{{percent}}%"
+    },
+    "mint": {
+      "title": "铸造 Sleep 代币",
+      "connectDescription": "要铸造 NFT，请连接您的钱包。",
+      "parameters": {
+        "title": "铸造参数",
+        "globalRank": "全球排名：",
+        "amplifier": "奖励放大系数：",
+        "maxTerm": "最大期限：",
+        "maxTermValue": "{{days}} 天",
+        "timeDecay": "时间衰减："
+      },
+      "form": {
+        "title": "铸造 SLEEP 代币",
+        "countLabel": "铸造数量：",
+        "termLabel": "质押期限（天）：",
+        "fee": "铸造费用：",
+        "reward": "预估奖励：",
+        "rewardError": "计算出错",
+        "submitting": "铸造中...",
+        "submit": "开始铸造"
+      }
+    },
+    "stake": {
+      "title": "质押您的代币",
+      "connectDescription": "要使用 ATM 质押系统，请连接您的钱包。",
+      "atm": {
+        "title": "SLEEP 协议 ATM",
+        "welcome": "欢迎使用 Sleep 协议 ATM",
+        "insertCard": "请插入您的钱包卡",
+        "selectService": "选择服务：",
+        "services": {
+          "stake": "质押 SLEEP",
+          "unstake": "取消质押 SLEEP",
+          "checkBalance": "查看余额",
+          "rewards": "领取奖励"
+        },
+        "processing": "处理中...",
+        "thankYou": "感谢使用 Sleep 协议 ATM",
+        "screen": {
+          "balance": "当前余额：",
+          "staked": "质押数量：",
+          "rewards": "待领取奖励：",
+          "enterAmount": "输入数量：",
+          "confirm": "确认交易",
+          "success": "交易成功！",
+          "accountSummary": "账户摘要",
+          "operation": "操作：",
+          "amount": "数量：",
+          "available": "可用：",
+          "enterUsingKeypad": "使用键盘输入数量",
+          "pleaseWait": "请稍候...",
+          "walletConnected": "钱包已连接",
+          "okbRewards": "OKB 奖励：",
+          "sleepRewards": "SLEEP 奖励："
+        },
+        "buttons": {
+          "cancel": "取消",
+          "back": "返回",
+          "confirm": "确认",
+          "menu": "菜单"
+        },
+        "status": {
+          "approving": "授权中...",
+          "confirmingApprove": "确认授权中...",
+          "staking": "质押中...",
+          "confirmingStake": "确认质押中...",
+          "unstaking": "取消质押中..."
+        }
+      }
+    },
+    "market": {
+    "title": "NFT 市场",
+    "connectDescription": "要浏览和购买 NFT，请连接您的钱包。",
+    "filters": {
+      "title": "市场统计与筛选",
+      "totalListings": "总上架数：",
+      "floor": "地板价：",
+      "sort": "排序：",
+      "price": "价格区间：",
+      "term": "期限筛选：",
+      "refresh": "刷新"
+    },
+    "sort": {
+      "newest": "最新优先",
+      "price": "价格：从低到高",
+      "rank": "排名"
+    },
+    "price": {
+      "all": "所有价格",
+      "low": "低于 10 OKB",
+      "mid": "10-100 OKB",
+      "high": "高于 100 OKB"
+    },
+    "term": {
+      "all": "所有期限",
+      "short": "短期 ≤7 天",
+      "medium": "中期 8-30 天",
+      "long": "长期 >30 天"
+    },
+    "errors": {
+      "fetchFailed": "获取市场列表失败"
+    },
+    "toast": {
+      "purchaseSuccess": "NFT 购买成功！",
+      "purchaseFailed": "购买失败，请重试。"
+    },
+    "listings": {
+      "title": "可用的 NFT",
+      "loading": "正在加载列表...",
+      "empty": "没有符合条件的上架",
+      "cardTitle": "Sleep NFT #{{id}}",
+      "price": "价格：",
+      "count": "数量：",
+      "term": "期限：",
+      "termUnit": "天",
+      "rank": "排名：",
+      "seller": "卖家：{{seller}}",
+      "buying": "购买中...",
+      "buy": "💰 立即购买"
+    },
+    "profile": {
+      "title": "个人资料",
+      "connectDescription": "要查看您的个人资料和 NFT，请连接您的钱包。",
+      "account": {
+        "title": "账户信息",
+        "address": "连接地址：",
+        "balance": "SLEEP 余额：",
+        "totalStaked": "总质押量：",
+        "claimableOkb": "可领取 OKB：",
+        "claimableSleep": "可领取 SLEEP："
+      },
+      "status": {
+        "title": "账户状态",
+        "label": "质押状态：",
+        "active": "✅ 活跃质押者（{{tier}}）",
+        "tierVeteran": "老牌",
+        "tierNew": "新手",
+        "inactive": "❌ 暂无质押",
+        "effective": "有效质押：",
+        "loading": "正在加载账户状态..."
+      },
+      "actions": {
+        "stake": "前往质押",
+        "mint": "前往铸造",
+        "history": "查看历史",
+        "historyToast": "交易历史即将上线！"
+      }
+    },
+    "liquidate": {
+      "title": "清算仓位",
+      "connectDescription": "要玩清算游戏，请连接您的钱包。",
+      "overview": {
+        "title": "清算概览",
+        "points": [
+          "<strong>寻找可清算仓位</strong> - 识别逾期待领取的铸造",
+          "<strong>获取清算奖励</strong> - 获得被清算仓位的罚金",
+          "<strong>维护协议健康</strong> - 帮助系统保持平衡"
+        ]
+      },
+      "listings": {
+        "title": "可清算列表",
+        "searching": "正在搜索可清算仓位...",
+        "hint": "当铸造超过期限未领取时，将出现可清算仓位"
+      },
+      "actions": {
+        "refresh": "刷新搜索",
+        "refreshToast": "正在搜索可清算仓位...",
+        "history": "查看历史",
+        "historyToast": "清算历史即将上线！"
+      }
+    }
+  },
+    "background": {
+      "title": "背景层",
+      "color1": "颜色 1",
+      "color2": "颜色 2",
+      "gradientDirection": "渐变方向",
+      "directionLR": "左 → 右",
+      "directionTB": "上 → 下",
+      "directionDiagonal": "对角线 ↘",
+      "pattern": "背景图案",
+      "patternNone": "无",
+      "patternStars": "✦ 星星",
+      "patternDots": "● 圆点",
+      "patternGrid": "▦ 网格",
+      "patternWaves": "〜 波纹",
+      "patternColor": "图案颜色",
+      "patternOpacity": "不透明度：{{value}}%"
+    },
+    "avatar": {
+      "title": "头像设计器",
+      "face": "脸型",
+      "eyes": "眼睛",
+      "mouth": "嘴型",
+      "hair": "发型",
+      "skin": "肤色",
+      "accessory": "睡眠配饰",
+      "faceOptions": ["表情脸", "像素脸", "豆豆脸", "吐司脸"],
+      "eyeOptions": [". .（正常）", "> <（闭眼）", "■ ■（像素）", "T T（哭泣）", "^ ^（开心）", "x x（眩晕）", "O O（惊讶）"],
+      "mouthOptions": [":)", ":3", ":O", ":|（平静）", ":D", "w"],
+      "hairOptions": ["光头", "刺猬头", "锅盖头", "爆炸头", "长发"],
+      "skinOptions": ["浅色", "偏浅", "中等", "偏深", "深色", "粉色", "绿色", "蓝色"],
+      "accessoryOptions": ["无", "像素墨镜", "睡帽", "天使光环", "Zzz 图标"]
+    },
+    "badge": {
+      "title": "徽章层",
+      "type": "徽章类型",
+      "options": ["无", "火箭（探索者）", "钻石（持有者）", "月亮（梦想家）", "闪电（极速）"]
+    },
+    "country": {
+      "title": "国家层",
+      "show": "显示国旗",
+      "select": "国家 / 地区",
+      "options": {
+        "AU": "🇦🇺 澳大利亚",
+        "BR": "🇧🇷 巴西",
+        "CA": "🇨🇦 加拿大",
+        "CN": "🇨🇳 中国",
+        "FR": "🇫🇷 法国",
+        "DE": "🇩🇪 德国",
+        "IN": "🇮🇳 印度",
+        "IT": "🇮🇹 意大利",
+        "JP": "🇯🇵 日本",
+        "MX": "🇲🇽 墨西哥",
+        "NL": "🇳🇱 荷兰",
+        "NO": "🇳🇴 挪威",
+        "RU": "🇷🇺 俄罗斯",
+        "SG": "🇸🇬 新加坡",
+        "KR": "🇰🇷 韩国",
+        "ES": "🇪🇸 西班牙",
+        "SE": "🇸🇪 瑞典",
+        "CH": "🇨🇭 瑞士",
+        "UK": "🇬🇧 英国",
+        "US": "🇺🇸 美国"
+      }
+    },
+    "mintModal": {
+      "title": "铸造通行证",
+      "description": "确认您的设计，然后进行铸造。"
+    },
+    "elements": {
+      "logo": "Logo 文本",
+      "avatar": "头像",
+      "chip": "芯片",
+      "cardholderInfo": "持卡人信息",
+      "accountBalance": "账户余额",
+      "claimableInfo": "可提取信息",
+      "badge": "个性徽章",
+      "countryFlag": "国旗标识",
+      "devSupport": "开发者支持标识",
+      "devSupportInfo": "开发者支持信息",
+      "bottomText": "底部文字"
+    },
+    "nft": {
+      "labels": {
+        "stakedSleep": "已质押 SLEEP",
+        "claimableOkb": "可领取 OKB",
+        "claimableSleep": "可领取 SLEEP",
+        "devSupport": "开发支持",
+        "totalPool": "总资金池",
+        "cardHolder": "持卡人",
+        "accessPassTitle": "SLEEP 协议通行证"
+      }
+    },
+    "status": {
+      "current": "当前页面：{{page}}"
+    },
+    "litepaper": {
+      "tableOfContents": "目录",
+      "ethos": {
+        "title": "我们的理念：重新定义公平启动",
+        "p1": "Sleep Coin 诞生于参与证明的核心原则，但经过重新设计，以解决第一代公平启动代币的经济脆弱性。我们相信一个透明、公平和可持续的系统。",
+        "p2": "我们的理念建立在三个支柱之上：",
+        "pillar1": "可验证的稀缺性",
+        "pillar1Text": "与无限通胀的代币不同，Sleep Coin 拥有几乎可以预测的硬性上限（达到软顶时的Mint代币数量可以忽略不计~周期为1.5-2年左右），在一年内即大幅减产。价值来源于稀缺性。",
+        "pillar2": "经济可持续性", 
+        "pillar2Text": "通过铸造费和动态交易税系统，协议产生自己的流动性和质押者奖励，创造一个自我维持的经济循环，无需依赖外部资金。通过手续费避免了被机器人恶意批量Mint，以及大户恶意。",
+        "pillar3": "抗操纵性",
+        "pillar3Text": "代币经济学旨在阻止巨鲸并奖励长期参与者。人口压力机制确保随着更多人加入，通胀率自动调整，防止系统被少数人控制。",
+        "pillar4": "完全去中心化",
+        "pillar4Text": "所有Mint税和交易税都完全用于协议的流动性和质押者奖励，不存在预留团队资金。测试网的测试合约中的管理员权限全部丢弃并删除相关代码，无任何管理员权限"
+      },
+      "tokenomics": {
+        "title": "代币经济学：机制的交响乐",
+        "intro": "Sleep Coin 中的每个机制都设计为协同工作，创造一个平衡和稳健的经济模型。",
+        "keyMetrics": "关键指标",
+        "totalSupply": "总供应量",
+        "mintingMechanism": "铸造机制",
+        "stakingRewards": "质押奖励",
+        "feeStructure": "费用结构"
+      },
+      "mintFee": {
+        "title": "铸造费用 (0.01 OKB)",
+        "content": "每批铸造（最多100个单位）的小额固定费用作为关键的反机器人措施。这笔费用是协议流动性和质押奖励的初始资金主要来源，确保系统能够从第一天开始自举。",
+        "tip": "专业提示：费用结构在资助生态系统的同时防止垃圾邮件！"
+      },
+      "dynamicTerm": {
+        "title": "动态最大期限",
+        "content": "最大铸造期限从45天开始，每3天增加1天。这给后来的参与者一个公平的机会，利用'时间武器'对抗早期铸造者，在第一年平衡竞争环境。",
+        "timeline": "时间线：45天 → 每3天+1天 → 平衡竞争环境！"
+      },
+      "populationPressure": {
+        "title": "人口压力（放大器调整）",
+        "content": "奖励放大器是铸造公式中的关键组件，它不是静态的。每增加100,000个全球排名，基础放大器减少2%。这在用户群增长时起到通胀的自然制动作用，确保长期可持续性。",
+        "important": "重要：更多用户 = 更低通胀！智能经济学！"
+      },
+      "timeDecay": {
+        "title": "时间衰减（指数递减）",
+        "content": "强大的指数衰减函数应用于铸造奖励计算。这确保铸造奖励在一年后逐渐趋向于接近零，创造有限的发行窗口并建立通胀阶段的明确结束。",
+        "result": "结果：有限供应 + 递减通胀 = 价值保值！"
+      },
+      "tax": {
+        "title": "交易税",
+        "content": "交易税旨在奖励长期持有者并为生态系统提供资金。税收分为两个阶段：",
+        "phase1": "第一阶段（第一年）：",
+        "phase1Tax": "2% 买入税 / 4% 卖出税",
+        "phase2": "第二阶段（一年后）：",
+        "phase2Tax": "0% 买入税 / 1% 卖出税"
+      },
+      "feeDistribution": {
+        "title": "费用分配",
+        "content": "协议收集的所有费用（来自铸造和税收）都通过编程分配：",
+        "beforeRank": "在全球排名达到100,000之前：",
+        "beforeRankText": "50%给协议拥有的流动性，48%给OKB质押奖励，2%销毁",
+        "afterRank": "在全球排名达到100,000之后：",
+        "afterRankText": "100%的所有费用都定向到OKB质押奖励，为长期质押者创造强大激励，交易税带来的奖励会随着人口的增加而逐渐从打入质押池转为完全奖励用户，并在随着代币减产系数一起，一起逐渐归零。至此，Sleep代币和协议合约将会变成一个完全无税，无中心化权限，完全社区自治的项目。在完全归为普通ERC代币时，项目放会持续Build为token赋能。我们已经完成了NFT市场的开发，后续还有游戏，合约DEX等惊喜（也许）"
+      }
+    },
+    "contextMenu": {
+      "view": "查看",
+      "refresh": "刷新",
+      "new": "新建",
+      "properties": "属性",
+      "notepadDocument": "记事本文档",
+      "refreshed": "桌面已刷新",
+      "propertiesTitle": "Sleep Protocol 属性",
+      "version": "版本",
+      "build": "构建",
+      "platform": "平台",
+      "developer": "开发者",
+      "description": "描述",
+      "descriptionText": "用于被动收入生成的去中心化协议"
+    }
+  },
+    "taskBar": {
+      "contextMenu": {
+        "restore": "还原",
+        "minimize": "最小化",
+        "close": "关闭"
+      }
+    },
+    "docs": {
+      "tableOfContents": "目录",
+      "overview": "概述",
+      "architecture": "架构设计", 
+      "staking": "质押机制",
+      "tokenomics": "代币经济学",
+      "api": "API参考",
+      "faq": "常见问题",
+      "edit": "编辑",
+      "save": "保存",
+      "devMode": "开发者模式：您可以编辑此文档"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "sleep-minter-subgraph",
+  "version": "1.0.0",
+  "description": "Subgraph for SleepMinter NFT Protocol",
+  "scripts": {
+    "codegen": "graph codegen",
+    "build": "graph build",
+    "deploy": "graph deploy --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/ <YOUR_GITHUB_USERNAME>/<SUBGRAPH_NAME>"
+  },
+  "dependencies": {
+    "@graphprotocol/graph-cli": "^0.61.0",
+    "@graphprotocol/graph-ts": "^0.30.0"
+  },
+  "private": true
+}
+

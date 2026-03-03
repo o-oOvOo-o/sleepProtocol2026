@@ -1,0 +1,581 @@
+{
+  "contract": "Contract",
+  "donate": "Donate",
+  "global-rank": "Global Rank",
+  "chain": "Chain",
+  "address": "Address",
+  "theme": "Theme",
+  "add-to-wallet": "Add SLEEPING to Wallet",
+  "connect-wallet": "Connect Wallet",
+  "or": "or",
+  "success": "Success",
+  "link": {
+    "developer": "Developer",
+    "website-source-code": "Website Source Code",
+    "whitepaper": "Whitepaper",
+    "docs": "Documentation",
+    "twitter": "Twitter",
+    "telegram": "Telegram",
+    "discord": "Discord",
+    "github": "GitHub",
+    "coinmarketcap": "CoinMarketCap",
+    "dune": "Dune Analytics"
+  },
+  "meta": {
+    "description": "Sleep Coin is a decentralized, fair launch cryptocurrency protocol designed for passive income, allowing users to earn rewards by participating in the ecosystem."
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "chains": "Chains",
+    "general-stats": "General Stats",
+    "supply": "Supply",
+    "rewards": "Rewards",
+    "days-since-launch": "Days Since Launch",
+    "token-address": "Token/Address",
+    "select-chain": "Select Chain",
+    "chain-id": "Chain ID: {{chainId}}"
+  },
+  "mint": {
+    "title": "Mint",
+    "button-sleep": "Sleep Now",
+    "calculation-details": "Calculation Details",
+    "reward-calculator": "Reward Calculator",
+    "simulator": {
+      "title": "Scenario Simulator",
+      "term": "Term (Days)",
+      "count": "Count",
+      "rank": "Global Rank",
+      "days": "Days Since Genesis",
+      "result": "Simulated Reward"
+    }
+  },
+  "stake": {
+    "title": "Stake",
+    "start": "Start Staking",
+    "staking": "Staking",
+    "end": "End Stake",
+    "end-early": "End Stake Early",
+    "terms": "Staking Terms",
+    "terms-details": "Withdraw original stake amount plus yield at any time after the maturity date, or at any time the original stake amount with 0 (zero) yield before the maturity date. One stake at a time per one address",
+    "terms-details-new": "Stake your SLEEPING tokens to earn OKB rewards from protocol fees. A loyalty accelerator applies: stakers for over 30 days (Veterans) receive a 20% bonus, funded by a 20% deduction from new stakers' rewards.",
+    "note": "Note",
+    "note-description": "Your stake term is not over yet. You can end your stake early without a penalty without you yield or you can wait until your stake matures to get the full yield.",
+    "your-stake": "Your Stake",
+    "veteran-status": "Status",
+    "days-to-veteran": "Days to Veteran",
+    "rewards-to-claim": "Rewards to Claim",
+    "claim-reward": "Claim Reward",
+    "unstake": "Unstake",
+    "approve": "Approve"
+  },
+  "profile": {
+    "title": "My Minting Profile",
+    "loading": "Loading your minting positions...",
+    "table": {
+      "nft-id": "NFT ID",
+      "amount": "Mint Units",
+      "maturity-date": "Maturity Date",
+      "rewards": "Est. Rewards",
+      "claim": "Claim"
+    }
+  },
+  "gas": {
+    "gas": "Gas",
+    "transaction": "Transaction",
+    "total": "Total",
+    "gas-on-destination": "Gas on Destination",
+    "est-gas-on-destination": "Est. Gas on Destination"
+  },
+  "liquidate": {
+    "title": "Liquidate"
+  },
+  "access-pass": {
+    "title": "Access Pass"
+  },
+  "litepaper": {
+    "title": "Litepaper"
+  },
+  "card": {
+    "chain": "Chain",
+    "days-since-launch": "Days Since Launch",
+    "contract": "Contract",
+    "global-rank": "Global Rank",
+    "mint-fee": "Mint Fee",
+    "active-mints": "Active Mints",
+    "active-stakes": "Active Stakes",
+    "max-mint-term": "Max Mint Term",
+    "total": "Total",
+    "matures-in": "Matures in",
+    "progress": "Progress",
+    "estimated": "Estimated",
+    "estimated-reward": "Estimated Reward",
+    "amplifier": "Amplifier",
+    "time-decay": "Time Decay",
+    "eaa-rate": "EAA Rate",
+    "term": "Term",
+    "reward": "Reward",
+    "penalty": "Penalty",
+    "yield": "Yield",
+    "liquid": "Liquid",
+    "staked": "Staked",
+    "maturity": "Maturity",
+    "claim-rank": "Claim Rank",
+    "annual-percentage-yield": "APY",
+    "days": "Days",
+    "countdown-details": "Day•Hours:Minutes:Seconds"
+  },
+  "form-field": {
+    "days": "Days",
+    "days-required": "Sleep Duration is required.",
+    "days-positive": "Sleep Duration must be a positive number.",
+    "days-maximum": "Sleep Duration cannot exceed {{numberOfDays}} days.",
+    "days-description": "Number of days",
+    "term-days": "Term (Days)",
+    "term-placeholder": "e.g., 45",
+    "count": "Count",
+    "mint-units": "MINT UNITS",
+    "sleep-duration": "SLEEP DURATION",
+    "count-required": "Mint Units is required.",
+    "count-min": "Count must be at least 1",
+    "count-max": "Count cannot exceed {{max}}",
+    "count-placeholder": "e.g., 10",
+    "percentage": "Percentage",
+    "percentage-required": "Percentage required",
+    "percentage-positive": "Percentage must be greater than 0",
+    "percentage-maximum": "Maximum percentage is 100",
+    "percentage-description": "Amount out of 100",
+    "wallet-address": "Wallet Address",
+    "wallet-address-description": "Wallet address beginning with 0x...",
+    "wallet-address-required": "Wallet address required",
+    "wallet-address-invalid": "Wallet address invalid",
+    "amount": "Amount",
+    "amount-required": "Amount required",
+    "amount-maximum": "Maximum amount is {{maximumAmount}}",
+    "amount-positive": "Amount must be greater than 0",
+    "amount-description": "Maximum amount",
+    "max": "Max",
+    "go-to-today": "Go to Today",
+    "lock-month": "Lock Month",
+    "days-integer": "Sleep Duration must be an integer.",
+    "count-integer": "Mint Units must be an integer."
+  },
+  "toast": {
+    "copied-to-clipboard": "Copied to clipboard",
+    "claim-successful": "Claim successful",
+    "mint-successful": "Mint successful!",
+    "claim-and-share-successful": "Claim mint and share successful",
+    "claim-and-stake-successful": "Claim mint and stake successful",
+    "stake-successful": "Stake successful",
+    "end-stake-successful": "End stake successful",
+    "error": "Error"
+  },
+  "common": {
+    "mint": "Mint",
+    "stake": "Stake",
+    "litepaper": "Litepaper",
+    "dashboard": "Dashboard",
+    "settings": "Settings",
+    "connect-wallet": "Connect Wallet",
+    "token-symbol": "SLEEPING",
+    "native-symbol": "OKB"
+  },
+  "winxp": {
+    "desktop": {
+      "sleep-protocol": "Sleep Protocol",
+      "internet-explorer": "Internet Explorer",
+      "sleep-website": "Sleep Website",
+      "minesweeper": "Minesweeper",
+      "my-computer": "My Computer"
+    },
+    "menu": {
+      "log-off": "Log Off",
+      "turn-off-computer": "Turn Off Computer",
+      "all-programs": "All Programs"
+    },
+    "app": {
+      "sleep-protocol-title": "Sleep Protocol - Dream Your Way to Wealth",
+      "internet-explorer-title": "Internet Explorer",
+      "address-bar": "Address(D):",
+      "go-button": "Go",
+      "address-placeholder": "Enter URL...",
+      "current-page": "Current Page",
+      "desktop-app-version": "Sleep Protocol Desktop App v1.0",
+      "navigation": {
+        "dashboard": "Dashboard",
+        "mint-nft": "Mint NFTs",
+        "stake": "Stake",
+        "liquidate": "Liquidate",
+        "market": "Market",
+        "profile": "Profile",
+        "access-pass": "Access Pass",
+        "developer": "Developer"
+      }
+    }
+  },
+  "market": {
+    "title": "NFT Marketplace",
+    "filters": {
+      "price-range": "Price Range",
+      "term-filter": "Term Filter",
+      "sort-by": "Sort By",
+      "all": "All",
+      "short": "Short ≤ 7d",
+      "medium": "Medium 8-30d",
+      "long": "Long > 30d",
+      "newest": "Newest First",
+      "price-low-high": "Price: Low to High",
+      "rank": "Rank"
+    },
+    "stats": {
+      "total-listings": "Total Listings",
+      "floor-price": "Floor Price",
+      "trading-volume": "24h Volume"
+    },
+    "nft": {
+      "buy-now": "Buy Now",
+      "view-details": "View Details",
+      "price": "Price",
+      "rank": "Rank",
+      "term": "Term",
+      "maturity": "Maturity",
+      "penalty": "Penalty"
+    },
+    "tooltip": {
+      "platform-fee": "Platform trading fee applies to all transactions"
+    }
+  },
+  "sleepProtocol": {
+    "nav": {
+      "dashboard": "Dashboard",
+      "accessPass": "Access Pass",
+      "mint": "Mint",
+      "stake": "Stake",
+      "market": "Market",
+      "profile": "Profile",
+      "liquidate": "Liquidate",
+      "litepaper": "Litepaper"
+    },
+    "common": {
+      "loading": "Loading...",
+      "connectTitle": "Connect Wallet"
+    },
+    "dashboard": {
+      "title": "Sleep Protocol Dashboard",
+      "globalStats": "Global Statistics",
+      "globalRank": "Global Rank",
+      "totalStaked": "Total Staked",
+      "daysSinceGenesis": "Days Since Genesis",
+      "protocolParameters": "Protocol Parameters",
+      "maxTerm": "Max Term (days)",
+      "totalSupply": "Total Supply",
+      "yourAccount": "Your Account",
+      "address": "Address",
+      "sleepBalance": "SLEEP Balance",
+      "connectTitle": "Connect Your Wallet",
+      "connectDescription": "Connect your wallet to access all Sleep Protocol features"
+    },
+    "accessPass": {
+      "title": "Access Pass Design Studio",
+      "designerTitle": "Draggable NFT Designer • Win98 Style",
+      "previewInstruction": "Drag to move · Double-click to enter resize mode · Drag the red handle to scale · Hover over the card to enlarge",
+      "scaleModeLabel": "Resize mode: {{element}} (current scale: {{scale}}x)",
+      "buttons": {
+        "random": "Random",
+        "reset": "Reset Layout",
+        "mint": "Mint Pass"
+      },
+      "connectTitle": "Connect Wallet",
+      "connectDescription": "Connect your wallet to design and mint your Access Pass"
+    },
+    "devSupport": {
+      "title": "Dev Support - Support the Development Team",
+      "points": [
+        "Additional optional contribution to support Limitless Labs development",
+        "Unlocks Win98 style aura and special badge",
+        "Possible access to future products from our team",
+        "Does not change Sleep Protocol rights or token economics"
+      ],
+      "noteTitle": "Important Notice",
+      "noteBody": "Dev Support contributions are completely optional and do not affect the decentralized nature of Sleep Protocol. All interpretation rights are reserved by the project team."
+    },
+    "whatYouGet": {
+      "title": "What You Get",
+      "items": [
+        "✅ 100% Free Forever - No fees",
+        "✅ Access to mint Sleep NFTs",
+        "✅ Stake SLEEP tokens",
+        "✅ Win98 retro style NFT",
+        "✅ On-chain permanent storage"
+      ]
+    },
+    "preview": {
+      "title": "Preview Controls",
+      "description": "Preview data (won't affect mint):",
+      "supportTier": "Support Tier",
+      "supportAmount": "Support (OKB)",
+      "stakedSleep": "Staked SLEEP",
+      "totalSupport": "Total Support",
+      "summaryTotal": "Total: {{amount}} OKB",
+      "summaryShare": "Your Share: {{percent}}%"
+    },
+    "mint": {
+      "title": "Mint Sleep Tokens",
+      "connectDescription": "Connect your wallet to start minting SLEEP tokens",
+      "parameters": {
+        "title": "Minting Parameters",
+        "globalRank": "Global Rank:",
+        "amplifier": "Amplifier:",
+        "maxTerm": "Max Term:",
+        "maxTermValue": "{{days}} days",
+        "timeDecay": "Time Decay:"
+      },
+      "form": {
+        "title": "Mint SLEEP Tokens",
+        "countLabel": "Count (how many mints):",
+        "termLabel": "Term (days):",
+        "fee": "Mint Fee:",
+        "reward": "Estimated Reward:",
+        "rewardError": "Error calculating",
+        "submitting": "Minting...",
+        "submit": "Mint Tokens"
+      }
+    },
+    "stake": {
+      "title": "Stake Your Tokens",
+      "connectDescription": "Connect your wallet to start staking"
+    },
+    "market": {
+      "title": "NFT Marketplace",
+      "connectDescription": "Connect your wallet to access the marketplace",
+      "filters": {
+        "title": "Market Stats & Filters",
+        "totalListings": "Total Listings:",
+        "floor": "Floor Price:",
+        "sort": "Sort By:",
+        "price": "Price Range:",
+        "term": "Term Filter:",
+        "refresh": "Refresh"
+      },
+      "sort": {
+        "newest": "Newest First",
+        "price": "Price: Low to High",
+        "rank": "Rank"
+      },
+      "price": {
+        "all": "All Prices",
+        "low": "< 10 OKB",
+        "mid": "10-100 OKB",
+        "high": "> 100 OKB"
+      },
+      "term": {
+        "all": "All Terms",
+        "short": "Short ≤ 7d",
+        "medium": "Medium 8-30d",
+        "long": "Long > 30d"
+      },
+      "errors": {
+        "fetchFailed": "Failed to fetch market listings"
+      },
+      "toast": {
+        "purchaseSuccess": "NFT purchased successfully!",
+        "purchaseFailed": "Purchase failed. Please try again."
+      },
+      "listings": {
+        "title": "Available NFTs",
+        "loading": "Loading listings...",
+        "empty": "No listings found matching your filters",
+        "cardTitle": "Sleep NFT #{{id}}",
+        "price": "Price:",
+        "count": "Count:",
+        "term": "Term:",
+        "termUnit": "days",
+        "rank": "Rank:",
+        "seller": "Seller: {{seller}}",
+        "buying": "Buying...",
+        "buy": "💰 Buy Now"
+      }
+    },
+    "profile": {
+      "title": "Your Profile",
+      "connectDescription": "Connect your wallet to view your profile and statistics",
+      "account": {
+        "title": "Account Information",
+        "address": "Connected Address:",
+        "balance": "SLEEP Balance:",
+        "totalStaked": "Total Staked:",
+        "claimableOkb": "Claimable OKB:",
+        "claimableSleep": "Claimable SLEEP:"
+      },
+      "status": {
+        "title": "Account Statistics",
+        "label": "Staking Status:",
+        "active": "✅ Active Staker ({{tier}})",
+        "tierVeteran": "Veteran",
+        "tierNew": "New",
+        "inactive": "❌ No Active Stakes",
+        "effective": "Effective Stake:",
+        "loading": "Loading account statistics..."
+      },
+      "actions": {
+        "stake": "Go to Staking",
+        "mint": "Go to Minting",
+        "history": "View History",
+        "historyToast": "Transaction history coming soon!"
+      }
+    },
+    "liquidate": {
+      "title": "Liquidate Positions",
+      "connectDescription": "Connect your wallet to access liquidation features",
+      "overview": {
+        "title": "Liquidation Overview",
+        "points": [
+          "<strong>Find Liquidatable Positions</strong> - Identify overdue mints",
+          "<strong>Earn Liquidation Rewards</strong> - Get penalties from liquidated positions",
+          "<strong>Maintain Protocol Health</strong> - Help keep the system balanced"
+        ]
+      },
+      "listings": {
+        "title": "Available Liquidations",
+        "searching": "Searching for liquidatable positions...",
+        "hint": "Positions become liquidatable when mints are not claimed within the specified term"
+      },
+      "actions": {
+        "refresh": "Refresh Search",
+        "refreshToast": "Searching for liquidations...",
+        "history": "View History",
+        "historyToast": "Liquidation history coming soon!"
+      }
+    },
+    "background": {
+      "title": "Background Layer",
+      "color1": "Color 1",
+      "color2": "Color 2",
+      "gradientDirection": "Gradient Direction",
+      "directionLR": "Left → Right",
+      "directionTB": "Top → Bottom",
+      "directionDiagonal": "Diagonal ↘",
+      "pattern": "Background Pattern",
+      "patternNone": "None",
+      "patternStars": "✦ Stars",
+      "patternDots": "● Dots",
+      "patternGrid": "▦ Grid",
+      "patternWaves": "〜 Waves",
+      "patternColor": "Pattern Color",
+      "patternOpacity": "Opacity: {{value}}%"
+    },
+    "avatar": {
+      "title": "Avatar Designer",
+      "face": "Face Type",
+      "eyes": "Eyes",
+      "mouth": "Mouth",
+      "hair": "Hair Style",
+      "skin": "Skin Color",
+      "accessory": "Sleep Accessory",
+      "faceOptions": [
+        "Emoticon",
+        "Pixel",
+        "Bean",
+        "Toast"
+      ],
+      "eyeOptions": [
+        ". . (Normal)",
+        "> < (Closed)",
+        "■ ■ (Pixel)",
+        "T T (Crying)",
+        "^ ^ (Happy)",
+        "x x (Dizzy)",
+        "O O (Surprised)"
+      ],
+      "mouthOptions": [
+        ":)",
+        ":3",
+        ":O",
+        ":| (Neutral)",
+        ":D",
+        "w"
+      ],
+      "hairOptions": [
+        "Bald",
+        "Spiky",
+        "Bowl Cut",
+        "Afro",
+        "Long"
+      ],
+      "skinOptions": [
+        "Light",
+        "Medium Light",
+        "Medium",
+        "Medium Dark",
+        "Dark",
+        "Pink",
+        "Green",
+        "Blue"
+      ],
+      "accessoryOptions": [
+        "None",
+        "Pixel Shades",
+        "Sleepy Cap",
+        "Angel Halo",
+        "Zzz Icon"
+      ]
+    },
+    "badge": {
+      "title": "Badge Layer",
+      "type": "Badge Type",
+      "options": [
+        "None",
+        "Rocket (Explorer)",
+        "Diamond (Holder)",
+        "Moon (Dreamer)",
+        "Lightning (Fast)"
+      ]
+    },
+    "country": {
+      "title": "Country Layer",
+      "show": "Show Flag",
+      "select": "Country / Region",
+      "options": {
+        "AU": "🇦🇺 Australia",
+        "BR": "🇧🇷 Brazil",
+        "CA": "🇨🇦 Canada",
+        "CN": "🇨🇳 China",
+        "FR": "🇫🇷 France",
+        "DE": "🇩🇪 Germany",
+        "IN": "🇮🇳 India",
+        "IT": "🇮🇹 Italy",
+        "JP": "🇯🇵 Japan",
+        "MX": "🇲🇽 Mexico",
+        "NL": "🇳🇱 Netherlands",
+        "NO": "🇳🇴 Norway",
+        "RU": "🇷🇺 Russia",
+        "SG": "🇸🇬 Singapore",
+        "KR": "🇰🇷 South Korea",
+        "ES": "🇪🇸 Spain",
+        "SE": "🇸🇪 Sweden",
+        "CH": "🇨🇭 Switzerland",
+        "UK": "🇬🇧 United Kingdom",
+        "US": "🇺🇸 United States"
+      }
+    },
+    "mintModal": {
+      "title": "Mint Access Pass",
+      "description": "Confirm your design before minting."
+    },
+    "elements": {
+      "logo": "Logo",
+      "avatar": "Avatar",
+      "chip": "Chip",
+      "cardholderInfo": "Cardholder",
+      "accountBalance": "Account Balance",
+      "claimableInfo": "Claimable Info",
+      "badge": "Badge",
+      "countryFlag": "Country Flag",
+      "devSupport": "Dev Support",
+      "devSupportInfo": "Dev Support Info",
+      "bottomText": "Footer Text"
+    },
+    "status": {
+      "current": "Current: {{page}}"
+    }
+  }
+}

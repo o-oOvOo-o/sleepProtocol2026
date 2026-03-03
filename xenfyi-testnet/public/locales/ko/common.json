@@ -1,0 +1,373 @@
+{
+  "contract": "컨트랙트",
+  "donate": "기부",
+  "global-rank": "글로벌 순위",
+  "chain": "체인",
+  "address": "주소",
+  "theme": "테마",
+  "add-to-wallet": "SLEEPING을 지갑에 추가",
+  "connect-wallet": "지갑 연결",
+  "or": "또는",
+  "success": "성공",
+  "link": {
+    "developer": "개발자",
+    "website-source-code": "웹사이트 소스 코드",
+    "whitepaper": "백서",
+    "docs": "문서",
+    "twitter": "Twitter",
+    "telegram": "Telegram",
+    "discord": "Discord",
+    "github": "GitHub",
+    "coinmarketcap": "CoinMarketCap",
+    "dune": "Dune Analytics"
+  },
+  "meta": {
+    "description": "슬립 코인은 패시브 인컴을 위해 설계된 탈중앙화된 공정한 출시 암호화폐 프로토콜로, 사용자가 생태계에 참여하여 보상을 받을 수 있습니다."
+  },
+  "dashboard": {
+    "title": "대시보드",
+    "chains": "체인",
+    "general-stats": "일반 통계",
+    "supply": "공급량",
+    "rewards": "보상",
+    "days-since-launch": "출시 이후 일수",
+    "token-address": "토큰/주소",
+    "select-chain": "체인 선택",
+    "chain-id": "체인 ID: {{chainId}}"
+  },
+  "mint": {
+    "title": "민트",
+    "button-sleep": "슬립 시작",
+    "calculation-details": "계산 세부사항",
+    "reward-calculator": "보상 계산기",
+    "simulator": {
+      "title": "시나리오 시뮬레이터",
+      "term": "기간 (일)",
+      "count": "개수",
+      "rank": "글로벌 순위",
+      "days": "제네시스부터의 일수",
+      "result": "시뮬레이션 결과"
+    }
+  },
+  "sleepProtocol": {
+    "nav": {
+      "dashboard": "대시보드",
+      "accessPass": "액세스 패스",
+      "mint": "민트",
+      "stake": "스테이킹",
+      "market": "마켓",
+      "profile": "프로필",
+      "liquidate": "청산",
+      "litepaper": "라이트페이퍼"
+    },
+    "common": {
+      "loading": "로딩 중...",
+      "connectTitle": "지갑 연결",
+      "walletRequired": "지갑 연결이 필요합니다",
+      "checkBottomRight": "오른쪽 하단 모서리를 확인하고 깜박이는 \"지갑\" 버튼을 클릭하세요"
+    },
+    "dashboard": {
+      "title": "Sleep Protocol 대시보드",
+      "globalStats": "글로벌 통계",
+      "globalRank": "글로벌 순위",
+      "totalStaked": "총 스테이킹",
+      "daysSinceGenesis": "제네시스 이후 일수",
+      "protocolParameters": "프로토콜 파라미터",
+      "maxTerm": "최대 기간 (일)",
+      "totalSupply": "총 공급량",
+      "yourAccount": "내 계정",
+      "address": "주소",
+      "sleepBalance": "SLEEP 잔액",
+      "connectTitle": "지갑 연결",
+      "connectDescription": "Sleep Protocol 기능을 이용하려면 지갑을 연결하세요"
+    },
+    "accessPass": {
+      "title": "액세스 패스 디자인 스튜디오",
+      "designerTitle": "드래그 가능한 NFT 디자이너 • Win98 스타일",
+      "previewInstruction": "드래그하여 이동 · 더블 클릭으로 크기 조절 모드 · 빨간 핸들을 드래그하여 크기 조절 · 카드에 마우스를 올리면 확대",
+      "scaleModeLabel": "크기 조절 모드: {{element}} (현재 배율: {{scale}}x)",
+      "buttons": {
+        "random": "랜덤",
+        "reset": "레이아웃 초기화",
+        "mint": "패스 민트"
+      },
+      "connectTitle": "지갑 연결",
+      "connectDescription": "지갑을 연결하여 패스를 디자인하고 민트하세요"
+    },
+    "devSupport": {
+      "title": "Dev Support - 개발 팀 지원",
+      "points": [
+        "• Limitless Labs 개발 팀을 위한 선택적 후원",
+        "• Win98 스타일 오라와 특별 배지 제공",
+        "• 향후 프로젝트 접근 가능성",
+        "• Sleep Protocol 권한과 토코노믹스에는 영향 없음"
+      ],
+      "noteTitle": "중요 안내",
+      "noteBody": "Dev Support는 완전 선택 사항이며 Sleep Protocol의 탈중앙화 특성에 영향을 주지 않습니다. 모든 해석 권한은 프로젝트 팀에 있습니다."
+    },
+    "whatYouGet": {
+      "title": "제공 사항",
+      "items": [
+        "✅ 영구 무료, 수수료 없음",
+        "✅ Sleep NFT 민트",
+        "✅ SLEEP 토큰 스테이킹",
+        "✅ Win98 레트로 스타일",
+        "✅ 온체인 영구 저장"
+      ]
+    },
+    "preview": {
+      "title": "미리보기 설정",
+      "description": "미리보기 데이터 (민트에 영향 없음):",
+      "supportTier": "지원 등급",
+      "supportAmount": "지원 금액 (OKB)",
+      "stakedSleep": "스테이킹된 SLEEP",
+      "totalSupport": "총 지원 금액",
+      "summaryTotal": "총합: {{amount}} OKB",
+      "summaryShare": "내 비중: {{percent}}%"
+    },
+    "mint": {
+      "title": "Sleep 토큰 민트",
+      "connectDescription": "SLEEP 토큰을 민트하려면 지갑을 연결하세요",
+      "parameters": {
+        "title": "민팅 파라미터",
+        "globalRank": "글로벌 순위:",
+        "amplifier": "보상 증폭:",
+        "maxTerm": "최대 기간:",
+        "maxTermValue": "{{days}}일",
+        "timeDecay": "시간 감쇠:"
+      },
+      "form": {
+        "title": "SLEEP 토큰 민트",
+        "countLabel": "민트 수량:",
+        "termLabel": "기간 (일):",
+        "fee": "민트 수수료:",
+        "reward": "예상 보상:",
+        "rewardError": "보상 계산 오류",
+        "submitting": "민트 중...",
+        "submit": "토큰 민트"
+      }
+  },
+  "stake": {
+      "title": "토큰을 스테이킹",
+      "connectDescription": "ATM 스테이킹 시스템을 사용하려면 지갑을 연결하세요.",
+      "atm": {
+        "title": "SLEEP 프로토콜 ATM",
+        "welcome": "Sleep 프로토콜 ATM에 오신 것을 환영합니다",
+        "insertCard": "지갑 카드를 삽입해 주세요",
+        "selectService": "서비스 선택:",
+        "services": {
+          "stake": "SLEEP 스테이킹",
+          "unstake": "SLEEP 언스테이킹",
+          "checkBalance": "잔액 확인",
+          "rewards": "보상 받기"
+        },
+        "processing": "처리 중...",
+        "thankYou": "Sleep 프로토콜 ATM을 이용해 주셔서 감사합니다",
+        "screen": {
+          "balance": "현재 잔액:",
+          "staked": "스테이킹 양:",
+          "rewards": "미수령 보상:",
+          "enterAmount": "금액 입력:",
+          "confirm": "거래 확인",
+          "success": "거래 성공!",
+          "accountSummary": "계정 요약",
+          "operation": "작업:",
+          "amount": "금액:",
+          "available": "사용 가능:",
+          "enterUsingKeypad": "키패드로 금액 입력",
+          "pleaseWait": "잠시 기다려 주세요...",
+          "walletConnected": "지갑 연결됨",
+          "okbRewards": "OKB 보상:",
+          "sleepRewards": "SLEEP 보상:"
+        },
+        "buttons": {
+          "cancel": "취소",
+          "back": "뒤로",
+          "confirm": "확인",
+          "menu": "메뉴"
+        },
+        "status": {
+          "approving": "승인 중...",
+          "confirmingApprove": "승인 확인 중...",
+          "staking": "스테이킹 중...",
+          "confirmingStake": "스테이킹 확인 중...",
+          "unstaking": "언스테이킹 중..."
+        }
+      }
+    },
+    "market": {
+      "title": "NFT 마켓플레이스",
+      "connectDescription": "마켓플레이스를 이용하려면 지갑을 연결하세요"
+    },
+    "profile": {
+      "title": "프로필",
+      "connectDescription": "프로필을 보려면 지갑을 연결하세요"
+    },
+    "liquidate": {
+      "title": "청산",
+      "connectDescription": "청산 기능을 이용하려면 지갑을 연결하세요",
+      "overview": {
+        "title": "청산 개요",
+        "points": [
+          "만료된 민트를 식별하고 청산하여 보상 획득",
+          "청산자는 청산된 민트 가치의 일부를 받음",
+          "이를 통해 프로토콜의 건전성 유지"
+        ]
+      }
+    },
+    "litepaper": {
+      "title": "라이트페이퍼",
+      "content": "Sleep Protocol의 기술 사양 및 토코노믹스 세부사항"
+    },
+    "avatar": {
+      "title": "아바타",
+      "faceOptions": [
+        "둥근 얼굴", "사각 얼굴", "삼각 얼굴", "타원 얼굴", "다이아몬드 얼굴"
+      ],
+      "eyeOptions": [
+        "둥근 눈", "가는 눈", "큰 눈", "윙크", "감은 눈"
+      ],
+      "mouthOptions": [
+        "미소", "무표정", "곤란", "놀람", "윙크"
+      ],
+      "hairOptions": [
+        "짧은 머리", "긴 머리", "곱슬", "직모", "단발"
+      ],
+      "skinOptions": [
+        "밝은", "보통", "어두운", "매우 밝은", "매우 어두운"
+      ],
+      "accessoryOptions": [
+        "없음", "안경", "모자", "귀걸이", "목걸이"
+      ]
+    },
+    "badge": {
+      "title": "배지",
+      "options": [
+        "없음", "로켓", "다이아몬드", "달", "번개"
+      ]
+    },
+    "country": {
+      "title": "국가",
+      "options": {
+        "AU": "호주",
+        "BR": "브라질",
+        "CA": "캐나다",
+        "CN": "중국",
+        "FR": "프랑스",
+        "DE": "독일",
+        "IN": "인도",
+        "IT": "이탈리아",
+        "JP": "일본",
+        "MX": "멕시코",
+        "NL": "네덜란드",
+        "NO": "노르웨이",
+        "RU": "러시아",
+        "SG": "싱가포르",
+        "KR": "한국",
+        "ES": "스페인",
+        "SE": "스웨덴",
+        "CH": "스위스",
+        "UK": "영국",
+        "US": "미국"
+      }
+    },
+    "elements": {
+      "avatar": "아바타",
+      "badge": "배지",
+      "countryFlag": "국가 표시",
+      "devSupport": "개발자 지원 배지",
+      "devSupportInfo": "개발자 지원 정보",
+      "bottomText": "하단 문구"
+    },
+    "nft": {
+      "labels": {
+        "stakedSleep": "스테이킹된 SLEEP",
+        "claimableOkb": "청구 가능한 OKB",
+        "claimableSleep": "청구 가능한 SLEEP",
+        "devSupport": "개발자 지원",
+        "totalPool": "총 풀",
+        "cardHolder": "카드 소지자",
+        "accessPassTitle": "SLEEP 프로토콜 액세스 패스"
+      }
+    }
+  },
+  "status": {
+    "current": "현재 페이지: {{page}}"
+  },
+  "litepaper": {
+    "tableOfContents": "목차",
+    "ethos": {
+      "title": "우리의 이념: 공정한 출시의 재구성",
+      "p1": "Sleep Coin은 참여 증명의 핵심 원칙에서 태어났지만, 1세대 공정 출시 토큰의 경제적 취약성을 해결하기 위해 재설계되었습니다. 우리는 투명하고 공평하며 지속 가능한 시스템을 믿습니다.",
+      "p2": "우리의 철학은 네 가지 기둥에 기반합니다:",
+      "pillar1": "검증 가능한 희소성",
+      "pillar1Text": "무한 인플레이션 토큰과 달리, Sleep Coin은 거의 예측 가능한 하드캡을 가지고 있습니다(소프트캡에 도달했을 때 민트 토큰 수는 무시할 수 있을 정도 ~ 주기는 약 1.5-2년), 1년 내에 대폭 감산. 가치는 희소성에서 나옵니다.",
+      "pillar2": "경제적 지속가능성",
+      "pillar2Text": "민팅 수수료와 동적 거래세 시스템을 통해 프로토콜은 자체 유동성과 스테이커 보상을 생성하여 외부 자금에 의존하지 않는 자급자족 경제 루프를 만듭니다. 수수료를 통해 봇과 대형 보유자의 악의적인 배치 민팅을 방지합니다.",
+      "pillar3": "조작 저항성",
+      "pillar3Text": "토큰노믹스는 고래를 억제하고 장기 참여자에게 보상하도록 설계되었습니다. 인구 압력 메커니즘은 더 많은 사람들이 참여할수록 인플레이션율이 자동 조정되어 시스템이 소수에 의해 통제되는 것을 방지합니다.",
+      "pillar4": "완전한 탈중앙화",
+      "pillar4Text": "모든 민트세와 거래세는 완전히 프로토콜의 유동성과 스테이커 보상에 사용되며, 팀 자금 예약은 없습니다. 테스트넷의 테스트 계약에서 모든 관리자 권한이 폐기되고 관련 코드가 삭제되어 관리자 권한이 전혀 없습니다."
+    },
+    "tokenomics": {
+      "title": "토큰노믹스: 메커니즘의 교향곡",
+      "intro": "Sleep Coin의 모든 메커니즘은 조화롭게 작동하도록 설계되어 균형 잡히고 견고한 경제 모델을 만듭니다.",
+      "keyMetrics": "주요 지표",
+      "totalSupply": "총 공급량",
+      "mintingMechanism": "민팅 메커니즘",
+      "stakingRewards": "스테이킹 보상",
+      "feeStructure": "수수료 구조"
+    },
+    "mintFee": {
+      "title": "민팅 수수료 (0.01 OKB)",
+      "content": "민트 배치당(최대 100단위) 소액 고정 수수료는 중요한 안티봇 조치 역할을 합니다. 이 수수료는 프로토콜의 유동성과 스테이킹 보상의 초기 자금의 주요 원천이며, 시스템이 첫날부터 자체 부트스트랩할 수 있도록 보장합니다.",
+      "tip": "전문가 팁: 수수료 구조는 생태계에 자금을 제공하면서 스팸을 방지합니다!"
+    },
+    "dynamicTerm": {
+      "title": "동적 최대 기간",
+      "content": "최대 민팅 기간은 45일부터 시작하여 3일마다 1일씩 증가합니다. 이를 통해 후발 참여자들이 초기 민터들에 대해 '시간 무기'를 활용할 공정한 기회를 얻어 첫 해 동안 경쟁 환경을 균형 있게 만듭니다.",
+      "timeline": "타임라인: 45일 → 3일마다 +1일 → 경쟁 환경 균형!"
+    },
+    "populationPressure": {
+      "title": "인구 압력 (증폭기 조정)",
+      "content": "민팅 공식의 핵심 구성 요소인 보상 증폭기는 정적이지 않습니다. 글로벌 랭크가 100,000 증가할 때마다 기본 증폭기가 2% 감소합니다. 이는 사용자 기반이 성장함에 따라 인플레이션의 자연스러운 브레이크 역할을 하여 장기적 지속가능성을 보장합니다.",
+      "important": "중요: 더 많은 사용자 = 더 낮은 인플레이션! 스마트한 경제학!"
+    },
+    "timeDecay": {
+      "title": "시간 감쇠 (지수 감소)",
+      "content": "강력한 지수 감쇠 함수가 민트 보상 계산에 적용됩니다. 이를 통해 민트 보상이 1년 후 점진적으로 0에 가까워지도록 보장하여 유한한 발행 창을 만들고 인플레이션 단계의 명확한 종료를 설정합니다.",
+      "result": "결과: 유한 공급 + 감소하는 인플레이션 = 가치 보존!"
+    },
+    "tax": {
+      "title": "거래세",
+      "content": "거래세는 장기 보유자에게 보상하고 생태계에 자금을 제공하도록 설계되었습니다. 세금은 두 단계로 구성됩니다:",
+      "phase1": "1단계 (첫 해):",
+      "phase1Tax": "2% 구매세 / 4% 판매세",
+      "phase2": "2단계 (1년 후):",
+      "phase2Tax": "0% 구매세 / 1% 판매세"
+    },
+    "feeDistribution": {
+      "title": "수수료 분배",
+      "content": "프로토콜이 수집하는 모든 수수료(민팅과 세금에서)는 프로그래밍 방식으로 분배됩니다:",
+      "beforeRank": "글로벌 랭크가 100,000에 도달하기 전:",
+      "beforeRankText": "50%는 프로토콜 소유 유동성에, 48%는 OKB 스테이킹 보상에, 2%는 소각",
+      "afterRank": "글로벌 랭크가 100,000에 도달한 후:",
+      "afterRankText": "모든 수수료의 100%가 OKB 스테이킹 보상으로 향하여 장기 스테이커들에게 강력한 인센티브를 만듭니다. 거래세로 인한 보상은 인구 증가와 함께 스테이킹 풀 예치에서 완전한 사용자 보상으로 점진적으로 이동하며, 토큰 감산 계수와 함께 점진적으로 0에 가까워집니다. 이 시점에서 Sleep 토큰과 프로토콜 계약은 완전히 무세이고 탈중앙화된 완전한 커뮤니티 거버넌스 프로젝트가 됩니다. 일반 ERC 토큰이 되었을 때, 프로젝트는 토큰 구축과 강화를 계속할 것입니다. NFT 마켓플레이스 개발을 완료했으며, 게임, 계약 DEX 등의 서프라이즈가 뒤따를 예정입니다(아마도)."
+    }
+  },
+  "contextMenu": {
+    "view": "보기",
+    "refresh": "새로 고침",
+    "new": "새로 만들기",
+    "properties": "속성",
+    "notepadDocument": "메모장 문서",
+    "refreshed": "바탕화면이 새로 고쳐졌습니다",
+    "propertiesTitle": "Sleep Protocol 속성",
+    "version": "버전",
+    "build": "빌드",
+    "platform": "플랫폼",
+    "developer": "개발자",
+    "description": "설명",
+    "descriptionText": "패시브 수입 생성을 위한 탈중앙화 프로토콜"
+  }
+}

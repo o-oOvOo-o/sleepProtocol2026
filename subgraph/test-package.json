@@ -1,0 +1,17 @@
+{
+  "name": "subgraph-test",
+  "version": "1.0.0",
+  "description": "Sleep Protocol Subgraph 测试脚本",
+  "main": "test-subgraph.js",
+  "scripts": {
+    "test": "node test-subgraph.js",
+    "test-watch": "nodemon test-subgraph.js"
+  },
+  "dependencies": {
+    "axios": "^1.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.0"
+  }
+}
+

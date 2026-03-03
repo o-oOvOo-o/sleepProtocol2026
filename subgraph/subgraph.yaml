@@ -1,0 +1,140 @@
+specVersion: 0.0.5
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: TokenMinter
+    network: xlayertest
+    source:
+      address: '0x361F987684bdB6321d0CdED6C3c9D9cEd64F6050'
+      abi: TokenMinter
+      startBlock: 9410065
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - MintingPositionNFT
+        - ClaimEvent
+        - LiquidationStats
+        - GlobalStats
+      abis:
+        - name: TokenMinter
+          file: ./abis/TokenMinter.json
+      eventHandlers:
+        - event: Transfer(indexed address,indexed address,indexed uint256)
+          handler: handleTransfer
+        - event: RewardClaimed(indexed uint256,indexed address,bool,uint256,uint256)
+          handler: handleRewardClaimed
+        - event: MaturityUpdated(indexed uint256,uint256)
+          handler: handleMaturityUpdated
+      file: ./src/token-minter.ts
+  - kind: ethereum
+    name: TokenStaking
+    network: xlayertest
+    source:
+      address: '0x290D5B54393E4AAD4c38a117512873674924E50e'
+      abi: TokenStaking
+      startBlock: 9410065
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - AccessPassNFT
+        - StakingDeposit
+        - DividendDistribution
+        - StakingStats
+      abis:
+        - name: TokenStaking
+          file: ./abis/TokenStaking.json
+        - name: TokenAccessPass
+          file: ./abis/TokenAccessPass.json
+      eventHandlers:
+        - event: StakeRegistered(indexed uint256,indexed uint256,uint256,uint256,uint256)
+          handler: handleStakeRegistered
+        - event: StakeDeregistered(indexed uint256,indexed uint256,uint256,uint256)
+          handler: handleStakeDeregistered
+        - event: SharesConverted(uint256,uint256,uint256)
+          handler: handleSharesConverted
+        - event: DividendDistributed(indexed uint8,uint256,uint256)
+          handler: handleDividendDistributed
+      file: ./src/token-staking.ts
+  - kind: ethereum
+    name: TokenAccessPass
+    network: xlayertest
+    source:
+      address: '0x7E46F65263662214C6C80D2854F94209EB4033BC'
+      abi: TokenAccessPass
+      startBlock: 9410065
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - AccessPassNFT
+      abis:
+        - name: TokenAccessPass
+          file: ./abis/TokenAccessPass.json
+      eventHandlers:
+        - event: Transfer(indexed address,indexed address,indexed uint256)
+          handler: handleAccessPassTransfer
+      file: ./src/token-access-pass.ts
+  - kind: ethereum
+    name: SleepNftMarketplace
+    network: xlayertest
+    source:
+      address: '0xbEcDF9D8d8C3C73380aB8F88077283dF671CFb21'
+      abi: SleepNftMarketplace
+      startBlock: 9410065
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - MarketListing
+        - MarketSale
+        - MarketStats
+        - MintingPositionNFT
+        - AccessPassNFT
+      abis:
+        - name: SleepNftMarketplace
+          file: ./abis/SleepNftMarketplace.json
+      eventHandlers:
+        - event: NFTListed(indexed address,indexed uint256,indexed address,uint256)
+          handler: handleNFTListed
+        - event: NFTSold(indexed address,indexed uint256,indexed address,address,uint256,uint256)
+          handler: handleNFTSold
+        - event: NFTDelisted(indexed address,indexed uint256,indexed address)
+          handler: handleNFTDelisted
+        - event: MarketplaceFeeUpdated(uint256,uint256)
+          handler: handleMarketplaceFeeUpdated
+        - event: TreasuryUpdated(indexed address,indexed address)
+          handler: handleTreasuryUpdated
+      file: ./src/nft-marketplace.ts
+  - kind: ethereum
+    name: TokenTreasury
+    network: xlayertest
+    source:
+      address: '0x9238308c6C3860161ADf21b2Fe3fbc8fD4f6a0c2'
+      abi: TokenTreasury
+      startBlock: 9410065
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - EpochInfo
+        - FeeDistribution
+        - TreasuryStats
+      abis:
+        - name: TokenTreasury
+          file: ./abis/TokenTreasury.json
+      eventHandlers:
+        - event: EpochFinalized(indexed uint256,uint256,uint8,uint8,uint8)
+          handler: handleEpochFinalized
+        - event: RevenueDistributed(indexed uint256,uint256,uint256)
+          handler: handleRevenueDistributed
+        - event: POLAddressUpdated(indexed address)
+          handler: handlePOLAddressUpdated
+      file: ./src/token-treasury.ts

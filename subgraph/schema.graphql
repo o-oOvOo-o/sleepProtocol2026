@@ -1,0 +1,313 @@
+# ==============================================
+# 铸币系统实体 (Minting System Entities)
+# ==============================================
+
+# 铸币仓位NFT - 对应TokenMinter合约铸造的NFT
+type MintingPositionNFT @entity {
+  id: ID!                    # tokenId
+  tokenId: BigInt!
+  owner: Bytes!
+  # 铸币参数
+  term: BigInt!              # 铸币期限(天数)
+  maturityTs: BigInt!        # 到期时间戳
+  rank: BigInt!              # 全局排名
+  amplifier: BigInt!         # 快照放大器值
+  count: BigInt!             # 铸币数量单位
+  mintedAt: BigInt!          # 铸币时间
+  # 状态信息
+  isMatured: Boolean!        # 是否已到期
+  isClaimed: Boolean!        # 是否已领取
+  isLiquidated: Boolean!     # 是否已清算
+  # 关联数据
+  claimEvent: ClaimEvent     # 领取事件(如果已领取)
+  marketListing: MarketListing # 市场挂单(如果在售)
+  # 计算字段
+  expectedReward: BigInt     # 预期奖励(可通过计算得出)
+  currentPenalty: BigInt     # 当前惩罚(如果延迟领取)
+}
+
+# 铸币领取/清算事件
+type ClaimEvent @entity(immutable: true) {
+  id: ID!                    # transaction hash
+  tokenId: BigInt!
+  nft: MintingPositionNFT!
+  claimer: Bytes!            # 领取者地址
+  originalOwner: Bytes!      # 原始持有者
+  rewardAmount: BigInt!      # 实际奖励金额
+  penaltyAmount: BigInt!     # 惩罚金额
+  liquidated: Boolean!       # 是否通过清算领取
+  penaltyDays: BigInt!       # 延迟天数
+  claimedAt: BigInt!
+  transactionHash: Bytes!
+}
+
+# 铸币全局统计
+type GlobalStats @entity {
+  id: ID!                    # Always "1" for singleton
+  # XEN式核心指标
+  globalRank: BigInt!        # 当前全局排名
+  totalMinted: BigInt!       # 总铸币数量
+  totalClaimed: BigInt!      # 总领取数量
+  totalLiquidated: BigInt!   # 总清算数量
+  # 当前协议状态
+  currentAmplifier: BigInt!  # 当前放大器值
+  currentMaxTerm: BigInt!    # 当前最大期限
+  currentDecayFactor: BigInt! # 当前时间衰减因子
+  # 动态期限增长
+  termGrowthPhase: Int!      # 当前期限增长阶段(1-8)
+  nextTermIncrease: BigInt!  # 下次期限增长时间
+  # 统计更新时间
+  lastUpdated: BigInt!
+}
+
+# ==============================================
+# 质押系统实体 (Staking System Entities) 
+# ==============================================
+
+# Access Pass NFT - 储蓄卡NFT，对应TokenAccessPass合约
+type AccessPassNFT @entity {
+  id: ID!                    # tokenId
+  tokenId: BigInt!
+  owner: Bytes!
+  # 卡片基础信息
+  totalAmount: BigInt!       # 卡内总质押金额
+  depositCount: Int!         # 当前存款记录数量 (最多6个)
+  activeDeposits: Int!       # 活跃存款数量
+  # APY加成信息
+  biggerBenefitLevel: Int!   # BiggerBenefit等级 (0-6%)
+  maxLongerPaysBonusLevel: Int! # 卡内最高时长APY加成等级
+  hasInfiniteStaking: Boolean! # 是否有无限质押
+  # 分红权信息
+  totalShares: BigInt!       # 总分红权
+  claimableRewards: BigInt!  # 可领取奖励
+  totalRewardsClaimed: BigInt! # 总已领取奖励
+  # 自定义信息
+  customSvg: String         # 自定义SVG代码
+  cardLevel: String!        # 卡片等级: Bronze/Silver/Gold/Diamond
+  # 时间信息
+  createdAt: BigInt!
+  lastUpdated: BigInt!
+  # 关联数据
+  deposits: [StakingDeposit!]! @derivedFrom(field: "accessPass")
+  marketListing: MarketListing # 如果在市场出售
+}
+
+# 质押存款记录 - 每个AccessPass最多6个
+type StakingDeposit @entity {
+  id: ID!                    # accessPassId-depositIndex
+  accessPass: AccessPassNFT!
+  depositIndex: Int!         # 存款索引 (0-5)
+  # 存款信息
+  amount: BigInt!
+  shares: BigInt!
+  stakingDays: BigInt!       # 质押天数
+  maturityTs: BigInt!        # 到期时间
+  depositedAt: BigInt!       # 存款时间
+  # 快照信息
+  shareRate: BigInt!         # 存款时的分红权汇率
+  amplifierSnapshot: BigInt! # 存款时的放大器快照
+  # APY加成
+  longerPaysMoreBonus: Int!  # 时长APY加成 (0-206%)
+  biggerBenefitBonus: Int!   # 大额APY加成 (0-6%)
+  isInfinite: Boolean!       # 是否无限质押
+  totalAPY: Int!             # 总APY加成
+  # 状态信息
+  isActive: Boolean!         # 是否活跃
+  isMatured: Boolean!        # 是否已到期  
+  isWithdrawn: Boolean!      # 是否已提取
+  withdrawnAt: BigInt        # 提取时间
+  penaltyAmount: BigInt      # 惩罚金额(如果有)
+}
+
+# 分红分配事件 - 多期分红系统
+type DividendDistribution @entity(immutable: true) {
+  id: ID!                    # epoch-period
+  epoch: BigInt!             # 分红轮次
+  period: DividendPeriod!    # 分红周期 (6天/30天/90天/360天/720天)
+  # 分红信息
+  totalAmount: BigInt!       # 总分红金额 (OKB)
+  totalShares: BigInt!       # 参与分红的总份额
+  sharePrice: BigInt!        # 每份额分红金额
+  # 参与统计
+  participantCount: Int!     # 参与用户数量
+  accessPassCount: Int!      # 参与AccessPass数量
+  # 时间信息
+  distributedAt: BigInt!
+  blockNumber: BigInt!
+}
+
+# 分红周期枚举
+enum DividendPeriod {
+  SIX_DAYS        # 6天周期 - 25%
+  THIRTY_DAYS     # 30天周期 - 25%
+  NINETY_DAYS     # 90天周期 - 17%
+  THREESIXTY_DAYS # 360天周期 - 17% 
+  SEVENTY_TWENTY_DAYS # 720天周期 - 16%
+}
+
+# 质押统计
+type StakingStats @entity {
+  id: ID!                    # Always "1" for singleton
+  # 总体统计
+  totalAccessPasses: BigInt! # 总AccessPass数量
+  totalStakedAmount: BigInt! # 总质押金额
+  totalActiveDeposits: Int!  # 总活跃存款数
+  totalShares: BigInt!       # 总分红权
+  # 分红统计
+  totalDividendsDistributed: BigInt! # 总分红金额
+  totalDividendRounds: BigInt! # 总分红轮数
+  currentShareRate: BigInt!  # 当前分红权汇率
+  # APY统计
+  averageAPY: BigInt!        # 平均APY
+  maxAPYLevel: Int!          # 最高APY等级
+  # 时间统计
+  lastDividendTime: BigInt!  # 最后分红时间
+  lastUpdated: BigInt!
+}
+
+# ==============================================
+# 财库系统实体 (Treasury System Entities)
+# ==============================================
+
+# Epoch信息 - 16天周期
+type EpochInfo @entity {
+  id: ID!
+  epochNumber: BigInt!
+  rankGrowth: BigInt!
+  polPercent: Int!
+  stakingPercent: Int!
+  burnPercent: Int!
+  finalizedAt: BigInt!
+  mode: EpochMode!
+}
+
+# Epoch模式枚举
+enum EpochMode {
+  WINTER
+  STANDARD
+  BULL
+}
+
+type FeeDistribution @entity {
+  id: ID!
+  epoch: EpochInfo!
+  okbAmount: BigInt!
+  sleepAmount: BigInt!
+  distributedAt: BigInt!
+}
+
+type TreasuryStats @entity {
+  id: ID!
+  totalEpochs: BigInt!
+  totalOkbRevenue: BigInt!
+  totalSleepRevenue: BigInt!
+  totalDistributedToPOL: BigInt!
+  totalDistributedToStaking: BigInt!
+  totalDistributedToBurn: BigInt!
+  polAddress: Bytes!
+  lastUpdated: BigInt!
+}
+
+# ==============================================
+# NFT市场实体 (NFT Marketplace Entities)
+# ==============================================
+
+# 市场挂单 - 支持铸币NFT和质押NFT
+type MarketListing @entity {
+  id: ID!                    # tokenId-contractAddress
+  # NFT信息
+  tokenId: BigInt!
+  nftContract: Bytes!        # 合约地址 (TokenMinter或TokenAccessPass)
+  nftType: NFTType!          # NFT类型
+  # 挂单信息
+  seller: Bytes!
+  price: BigInt!             # 价格 (SLEEPING)
+  active: Boolean!
+  listedAt: BigInt!
+  delistedAt: BigInt
+  # 关联的NFT实体
+  mintingNFT: MintingPositionNFT # 如果是铸币NFT
+  accessPassNFT: AccessPassNFT   # 如果是质押NFT
+  # 销售历史
+  sales: [MarketSale!]! @derivedFrom(field: "listing")
+}
+
+# NFT类型枚举
+enum NFTType {
+  MINTING_POSITION  # 铸币仓位NFT
+  ACCESS_PASS      # 质押储蓄卡NFT
+}
+
+# 市场交易记录
+type MarketSale @entity(immutable: true) {
+  id: ID!                    # transaction hash + log index
+  listing: MarketListing!
+  # 交易信息
+  tokenId: BigInt!
+  nftContract: Bytes!
+  nftType: NFTType!
+  seller: Bytes!
+  buyer: Bytes!
+  price: BigInt!
+  fee: BigInt!               # 市场手续费
+  # 时间信息
+  timestamp: BigInt!
+  soldAt: BigInt!            # 销售时间 (与timestamp相同)
+  blockNumber: BigInt!
+  transactionHash: Bytes!
+}
+
+# 市场手续费更新记录
+type MarketplaceFeeUpdate @entity(immutable: true) {
+  id: ID!                    # txHash-logIndex
+  oldFee: BigInt!            # 旧费率 (基点)
+  newFee: BigInt!            # 新费率 (基点)
+  updatedAt: BigInt!
+  transactionHash: Bytes!
+}
+
+# 市场统计
+type MarketStats @entity {
+  id: ID!                    # Always "1" for singleton
+  # 挂单统计
+  totalListings: BigInt!     # 历史总挂单数
+  activeListings: BigInt!    # 当前活跃挂单数
+  mintingNFTListings: BigInt! # 铸币NFT挂单数
+  accessPassListings: BigInt! # 质押NFT挂单数
+  # 交易统计
+  totalVolume: BigInt!       # 总交易量 (OKB)
+  totalSales: BigInt!        # 总交易笔数
+  totalFees: BigInt!         # 总手续费收入 (OKB)
+  # 价格统计
+  avgMintingNFTPrice: BigInt! # 铸币NFT平均价格
+  avgAccessPassPrice: BigInt! # 质押NFT平均价格
+  # 市场配置
+  currentFeePercent: BigInt! # 当前手续费率 (基点)
+  treasury: Bytes            # 金库合约地址
+  # 统计更新
+  lastUpdated: BigInt!
+}
+
+# ==============================================
+# 清算系统实体 (Liquidation System Entities)  
+# ==============================================
+
+# 清算统计 - 包含铸币清算和质押清算
+type LiquidationStats @entity {
+  id: ID!                    # Always "1" for singleton
+  # 铸币清算统计
+  totalMintingLiquidations: BigInt! # 总铸币清算数
+  totalMintingTokensLiquidated: BigInt! # 总清算代币数
+  totalMintingLiquidatorRewards: BigInt! # 总清算者奖励
+  totalMintingPenalties: BigInt! # 总铸币惩罚
+  # 质押清算统计
+  totalStakingLiquidations: BigInt! # 总质押清算数
+  totalStakingTokensLiquidated: BigInt! # 总质押清算代币数
+  totalStakingLiquidatorRewards: BigInt! # 总质押清算者奖励
+  totalStakingPenalties: BigInt! # 总质押惩罚
+  # 系统收益统计
+  totalPenaltiesToStaking: BigInt! # 惩罚给质押池的总金额
+  totalPenaltiesBurned: BigInt! # 惩罚销毁的总金额
+  # 统计更新
+  lastUpdated: BigInt!
+}

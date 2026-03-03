@@ -1,0 +1,49 @@
+.DS_Store
+node_modules/
+dist/
+build/
+out/
+.next/
+
+# Hardhat / Foundry outputs
+artifacts/
+cache/
+typechain/
+typechain-types/
+
+# Vercel
+.vercel/
+
+# Local data / vendors (too large or generated)
+graph-node/
+
+# ALL env files (keep only examples)
+.env*
+.env-*
+!.env.example
+!.env.template
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+.openzeppelin
+
+nohup.out
+
+coverage.json
+coverage/
+/test/.sim.test.js
+/test/.sim2.test.js
+/run-ganache.sh
+/stop-ganache.sh

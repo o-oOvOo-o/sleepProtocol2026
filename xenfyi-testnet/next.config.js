@@ -1,0 +1,36 @@
+/** @type {import('next').NextConfig} */
+const { i18n } = require("./next-i18next.config");
+
+const nextConfig = {
+  i18n,
+  reactStrictMode: true,
+  swcMinify: true,
+  compiler: {
+    emotion: true,
+  },
+  async redirects() {
+    return [
+      {
+        source: "/mint",
+        destination: "/app/mint/1",
+        permanent: false,
+      },
+      {
+        source: "/stake",
+        destination: "/app/stake/1",
+        permanent: false,
+      },
+    ];
+  },
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        '@react-native-async-storage/async-storage': false,
+      };
+    }
+    return config;
+  },
+};
+
+module.exports = nextConfig;

@@ -1,0 +1,188 @@
+
+í/å/dataSources:
+  - kind: ethereum
+    mapping:
+      abis:
+        - file:
+            /: /ipfs/Qmeu5YvtBumKcjRxhhTASbJ69qwQRb1o6TCvk63ZCtMUbx
+          name: TokenMinter
+      apiVersion: 0.0.7
+      entities:
+        - MintingPositionNFT
+        - ClaimEvent
+        - LiquidationStats
+        - GlobalStats
+      eventHandlers:
+        - event: 'Transfer(indexed address,indexed address,indexed uint256)'
+          handler: handleTransfer
+        - event: 'RewardClaimed(indexed uint256,indexed address,bool,uint256,uint256)'
+          handler: handleRewardClaimed
+        - event: 'MaturityUpdated(indexed uint256,uint256)'
+          handler: handleMaturityUpdated
+      file:
+        /: /ipfs/QmdTgrgCRydQ7GQKnEZXvTP9Se3omTV47q7C1VuivMwv8m
+      kind: ethereum/events
+      language: wasm/assemblyscript
+    name: TokenMinter
+    network: xlayertest
+    source:
+      abi: TokenMinter
+      address: '0xbf8931D1E8C075A693C5027a10A82DAA179b374e'
+      startBlock: 10910922
+  - kind: ethereum
+    mapping:
+      abis:
+        - file:
+            /: /ipfs/QmVjGSUhJ4Zrs9aA6C8gB5QJrK41mgTMx2z3313vVJLS5b
+          name: TokenStaking
+        - file:
+            /: /ipfs/QmRZkK8SJWo1xoczdtE1WvioY5Hv9YTAT1WMTJ8J9yB5SB
+          name: TokenAccessPass
+      apiVersion: 0.0.7
+      entities:
+        - AccessPassNFT
+        - StakingDeposit
+        - DividendDistribution
+        - StakingStats
+      eventHandlers:
+        - event: >-
+            StakeRegistered(indexed uint256,indexed
+            uint256,uint256,uint256,uint256)
+          handler: handleStakeRegistered
+        - event: 'StakeDeregistered(indexed uint256,indexed uint256,uint256,uint256)'
+          handler: handleStakeDeregistered
+        - event: 'SharesConverted(uint256,uint256,uint256)'
+          handler: handleSharesConverted
+        - event: 'DividendDistributed(indexed uint8,uint256,uint256)'
+          handler: handleDividendDistributed
+      file:
+        /: /ipfs/QmU1rDEaYyjzARBdUCd8mpaX7bp634wqwGddRFHov7o5RN
+      kind: ethereum/events
+      language: wasm/assemblyscript
+    name: TokenStaking
+    network: xlayertest
+    source:
+      abi: TokenStaking
+      address: '0x497540Df89b4a81f54fBC00824C6Fbd131Ef23ED'
+      startBlock: 10910911
+  - kind: ethereum
+    mapping:
+      abis:
+        - file:
+            /: /ipfs/QmRZkK8SJWo1xoczdtE1WvioY5Hv9YTAT1WMTJ8J9yB5SB
+          name: TokenAccessPass
+      apiVersion: 0.0.7
+      entities:
+        - AccessPassNFT
+      eventHandlers:
+        - event: 'Transfer(indexed address,indexed address,indexed uint256)'
+          handler: handleAccessPassTransfer
+      file:
+        /: /ipfs/QmPEovLLAbJD5G4XcL9zerMVwdYWwxzE34ar7WP4Sv8Fkn
+      kind: ethereum/events
+      language: wasm/assemblyscript
+    name: TokenAccessPass
+    network: xlayertest
+    source:
+      abi: TokenAccessPass
+      address: '0x81B5d5487C7BEDA9ce20661428f0824a63E086B6'
+      startBlock: 10910900
+  - kind: ethereum
+    mapping:
+      abis:
+        - file:
+            /: /ipfs/QmP3PpKfd4vyGNeL8WEgfyAeAbseA2Kk28MHhKfW3cJHco
+          name: NftMarketplace
+      apiVersion: 0.0.7
+      entities:
+        - MarketListing
+        - MarketSale
+        - MarketStats
+        - MintingPositionNFT
+      eventHandlers:
+        - event: 'NFTListed(indexed uint256,indexed address,uint256)'
+          handler: handleNFTListed
+        - event: >-
+            NFTSold(indexed uint256,indexed address,indexed
+            address,uint256,uint256)
+          handler: handleNFTSold
+        - event: 'NFTDelisted(indexed uint256,indexed address)'
+          handler: handleNFTDelisted
+        - event: 'MarketplaceFeeUpdated(uint256,uint256)'
+          handler: handleMarketplaceFeeUpdated
+      file:
+        /: /ipfs/QmfTem9Bk6UD8srBjYXNQ4PbbdfjGQETn8emwfroEnWhbZ
+      kind: ethereum/events
+      language: wasm/assemblyscript
+    name: MinterMarketplace
+    network: xlayertest
+    source:
+      abi: NftMarketplace
+      address: '0x91938002009C7614297D0bE6E4018486BDdb7D1C'
+      startBlock: 10910946
+  - kind: ethereum
+    mapping:
+      abis:
+        - file:
+            /: /ipfs/QmP3PpKfd4vyGNeL8WEgfyAeAbseA2Kk28MHhKfW3cJHco
+          name: NftMarketplace
+      apiVersion: 0.0.7
+      entities:
+        - MarketListing
+        - MarketSale
+        - MarketStats
+        - AccessPassNFT
+      eventHandlers:
+        - event: 'NFTListed(indexed uint256,indexed address,uint256)'
+          handler: handleNFTListed
+        - event: >-
+            NFTSold(indexed uint256,indexed address,indexed
+            address,uint256,uint256)
+          handler: handleNFTSold
+        - event: 'NFTDelisted(indexed uint256,indexed address)'
+          handler: handleNFTDelisted
+        - event: 'MarketplaceFeeUpdated(uint256,uint256)'
+          handler: handleMarketplaceFeeUpdated
+      file:
+        /: /ipfs/QmfTem9Bk6UD8srBjYXNQ4PbbdfjGQETn8emwfroEnWhbZ
+      kind: ethereum/events
+      language: wasm/assemblyscript
+    name: AccessPassMarketplace
+    network: xlayertest
+    source:
+      abi: NftMarketplace
+      address: '0xb697e0Cf905d773Fc327C1B11fF823f00af34898'
+      startBlock: 10910958
+  - kind: ethereum
+    mapping:
+      abis:
+        - file:
+            /: /ipfs/QmdEckxiXi18ZY4HTefH1pCFrmgAHKBHHYHXvej5dGd3wa
+          name: TokenTreasury
+      apiVersion: 0.0.7
+      entities:
+        - EpochInfo
+        - FeeDistribution
+        - TreasuryStats
+      eventHandlers:
+        - event: 'EpochFinalized(indexed uint256,uint256,uint8,uint8,uint8)'
+          handler: handleEpochFinalized
+        - event: 'RevenueDistributed(indexed uint256,uint256,uint256)'
+          handler: handleRevenueDistributed
+        - event: POLAddressUpdated(indexed address)
+          handler: handlePOLAddressUpdated
+      file:
+        /: /ipfs/QmThA4HNBupYWTsfCUEj3ytYGQrCesusMckYSMwUu5NbDh
+      kind: ethereum/events
+      language: wasm/assemblyscript
+    name: TokenTreasury
+    network: xlayertest
+    source:
+      abi: TokenTreasury
+      address: '0x086822F1A3323F5a8EBDf632051b89DE79B2AeDD'
+      startBlock: 10910935
+schema:
+  file:
+    /: /ipfs/QmZPSquZLN45RwC1Pm1XykGhqrBv3XfTfYk6tGtq1YjQGD
+specVersion: 0.0.5
+å/

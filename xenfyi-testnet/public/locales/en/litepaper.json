@@ -1,0 +1,50 @@
+{
+  "ethos": {
+    "title": "Our Ethos: A Fair Launch Reimagined",
+    "p1": "Sleep Coin is born from the core principles of Proof-of-Participation, but re-engineered to address the economic vulnerabilities of first-generation fair launch tokens. We believe in a system that is transparent, equitable, and sustainable.",
+    "p2": "Our philosophy is built on three pillars:",
+    "li1_strong": "Verifiable Scarcity",
+    "li1_text": "Unlike tokens with infinite inflation, Sleep Coin has a hard cap and a predictable emission schedule that decays over one year. Value is derived from scarcity.",
+    "li2_strong": "Economic Sustainability",
+    "li2_text": "Through a system of minting fees and transaction taxes, the protocol generates its own liquidity and rewards for stakers, creating a self-sustaining economic loop without reliance on external funding.",
+    "li3_strong": "Resistance to Manipulation",
+    "li3_text": "The tokenomics are designed to deter whales and reward long-term participants. The Population Pressure mechanism ensures that as more people join, the inflation rate automatically adjusts, preventing the system from being controlled by a few."
+  },
+  "tokenomics": {
+    "title": "Tokenomics: A Symphony of Mechanisms",
+    "intro": "Every mechanism in Sleep Coin is designed to work in concert, creating a balanced and robust economic model.",
+    "mint_fee": {
+      "title": "Minting Fee (0.01 OKB)",
+      "p1": "A small flat fee per mint batch (up to 100 units) serves as a critical anti-bot measure. This fee is the primary source of initial funding for the protocol's liquidity and staking rewards, ensuring the system can bootstrap itself from day one."
+    },
+    "dynamic_term": {
+      "title": "Dynamic Max Term",
+      "p1": "The maximum minting term starts at 45 days and increases by 1 day every 3 days. This gives later participants a fair chance to leverage the 'time weapon' against early minters, balancing the playing field over the first year."
+    },
+    "population_pressure": {
+      "title": "Population Pressure (Amplifier Adjustment)",
+      "p1": "The Reward Amplifier, a key component in the minting formula, is not static. For every 100,000 new global ranks, the base amplifier is reduced by 2%. This acts as a natural brake on inflation as the user base grows, ensuring long-term sustainability."
+    },
+    "time_decay": {
+      "title": "Time Decay (Exponential Reduction)",
+      "p1": "A powerful exponential decay function is applied to the mint reward calculation. This ensures that minting rewards trend towards near-zero after one year, creating a finite emission window and establishing a clear end to the inflationary phase."
+    },
+    "tax": {
+      "title": "Transaction Tax",
+      "p1": "A transaction tax is in place to reward long-term holders and fund the ecosystem. The tax is structured in two phases:",
+      "li1": "Phase 1 (First Year): 2% Buy Tax / 4% Sell Tax.",
+      "li2": "Phase 2 (After One Year): 0% Buy Tax / 1% Sell Tax."
+    },
+    "fee_distribution": {
+      "title": "Fee Distribution",
+      "p1": "All fees collected by the protocol (from minting and taxes) are distributed programmatically:",
+      "li1": "Until Global Rank reaches 100,000: 50% to Protocol-Owned Liquidity, 48% to OKB Staking Rewards, 2% Burned.",
+      "li2": "After Global Rank reaches 100,000: 100% of all fees are directed to OKB Staking Rewards, creating a powerful incentive for long-term stakers."
+    }
+  },
+  "table_of_contents": "Table of Contents"
+}
+
+
+
+
