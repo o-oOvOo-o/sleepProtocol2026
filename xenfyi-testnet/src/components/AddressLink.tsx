@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useTranslation } from "next-i18next";
 import toast from "react-hot-toast";
 import { useCopyToClipboard } from "usehooks-ts";
-import { Chain } from "wagmi";
+import type { Chain } from "viem/chains";
 
 import { truncatedAddress } from "~/lib/helpers";
 
