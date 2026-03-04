@@ -1,8 +1,8 @@
 import { mainnet } from "@wagmi/chains";
 import { Address, formatUnits } from "viem";
+import type { Chain } from "viem/chains";
 import React, { createContext, useContext, useEffect, useState, useMemo } from "react";
 import {
-  Chain,
   useAccount,
   useBalance,
   useReadContract,

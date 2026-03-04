@@ -1,5 +1,5 @@
 import { NextPage } from "next";
-import { Chain } from "wagmi";
+import type { Chain } from "viem/chains";
 
 interface ChainBalanceProps {
   chain?: Chain;

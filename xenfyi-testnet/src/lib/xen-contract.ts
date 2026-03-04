@@ -1,4 +1,5 @@
-import { Address, Chain } from "wagmi";
+import type { Address } from "viem";
+import type { Chain } from "viem/chains";
 
 import { SleepCoinABI } from "~/abi/SleepCoinABI";
 import { SleepMinterABI } from "~/abi/SleepMinterABI";

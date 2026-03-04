@@ -1,4 +1,4 @@
-import { Chain } from "wagmi";
+import type { Chain } from "viem/chains";
 
 export const ethpow: Chain = {
   id: 10001,
