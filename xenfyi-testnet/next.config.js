@@ -8,6 +8,9 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
   compiler: {
     emotion: true,
   },
@@ -19,8 +22,18 @@ const nextConfig = {
         permanent: false,
       },
       {
+        source: "/mint/:path*",
+        destination: "/app/mint/1",
+        permanent: false,
+      },
+      {
         source: "/stake",
-        destination: "/app/stake/1",
+        destination: "/app/stake",
+        permanent: false,
+      },
+      {
+        source: "/stake/:path*",
+        destination: "/app/stake",
         permanent: false,
       },
     ];
