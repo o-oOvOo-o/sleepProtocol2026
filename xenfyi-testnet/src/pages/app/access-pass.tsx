@@ -4,6 +4,7 @@
 // import ConnectWalletInfo from '~/components/ConnectWalletInfo';
 import { useState, useMemo, useEffect } from 'react';
 import { NextPage } from 'next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useAccount } from 'wagmi';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import toast from 'react-hot-toast';

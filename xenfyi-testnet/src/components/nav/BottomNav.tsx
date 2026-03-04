@@ -3,11 +3,10 @@ import type { NextPage } from "next";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
-import React, { useContext, useEffect,useState } from "react";
+import React, { useEffect, useState } from "react";
 import { isMobile } from "react-device-detect";
 
 import { navigationItems } from "~/components/Constants";
-import SleepContext from "~/contexts/SleepContext";
 import { UTC_TIME } from "~/lib/helpers";
 
 import { StatusBadge } from "../StatusBadge";

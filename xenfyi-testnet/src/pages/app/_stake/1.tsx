@@ -1,12 +1,14 @@
-export async function getStaticProps() {
+import type { GetServerSideProps, NextPage } from "next";
+
+export const getServerSideProps: GetServerSideProps = async () => {
   return {
     redirect: {
       destination: '/app/stake',
       permanent: false,
     },
   };
-}
+};
 
-export default function StakeRedirect() {
-  return null;
-}
+const StakeRedirect: NextPage = () => null;
+
+export default StakeRedirect;
